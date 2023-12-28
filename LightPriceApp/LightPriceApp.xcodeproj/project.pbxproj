@@ -12,6 +12,8 @@
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
 		B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */; };
 		B5823C702B3DFB7200A795D0 /* ESIOSEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C6F2B3DFB7200A795D0 /* ESIOSEndpoints.swift */; };
+		B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C742B3DFD9900A795D0 /* LightPrice.swift */; };
+		B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */; };
 		B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */; };
 		B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A42B3DCB63007F22FB /* ContentView.swift */; };
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
@@ -28,6 +30,8 @@
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		B5823C6F2B3DFB7200A795D0 /* ESIOSEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ESIOSEndpoints.swift; sourceTree = "<group>"; };
+		B5823C742B3DFD9900A795D0 /* LightPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPrice.swift; sourceTree = "<group>"; };
+		B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceDTO.swift; sourceTree = "<group>"; };
 		B586C29F2B3DCB63007F22FB /* LightPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceApp.swift; sourceTree = "<group>"; };
 		B586C2A42B3DCB63007F22FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +89,39 @@
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
+		B5823C712B3DFCBC00A795D0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C722B3DFCC600A795D0 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B5823C722B3DFCC600A795D0 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C732B3DFD8300A795D0 /* LightPrice */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B5823C732B3DFD8300A795D0 /* LightPrice */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C742B3DFD9900A795D0 /* LightPrice.swift */,
+				B5823C762B3DFD9E00A795D0 /* DataTransfer */,
+			);
+			path = LightPrice;
+			sourceTree = "<group>";
+		};
+		B5823C762B3DFD9E00A795D0 /* DataTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */,
+			);
+			path = DataTransfer;
+			sourceTree = "<group>";
+		};
 		B586C2962B3DCB63007F22FB = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +147,7 @@
 				B586C2A42B3DCB63007F22FB /* ContentView.swift */,
 				B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */,
 				B586C2A62B3DCB64007F22FB /* Assets.xcassets */,
+				B5823C712B3DFCBC00A795D0 /* Domain */,
 				B51F4D322B3DF5F200D69D65 /* Infrastructure */,
 				B586C2A92B3DCB64007F22FB /* Preview Content */,
 			);
@@ -233,7 +271,9 @@
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
+				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
 				B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */,
+				B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
