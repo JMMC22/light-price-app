@@ -16,6 +16,8 @@
 		B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */; };
 		B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C7A2B3E000900A795D0 /* LightPriceRepository.swift */; };
 		B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */; };
+		B5823C832B3E04D000A795D0 /* LightPriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C822B3E04D000A795D0 /* LightPriceResponse.swift */; };
+		B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C852B3E04E200A795D0 /* LightPriceResponseDTO.swift */; };
 		B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */; };
 		B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A42B3DCB63007F22FB /* ContentView.swift */; };
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceDTO.swift; sourceTree = "<group>"; };
 		B5823C7A2B3E000900A795D0 /* LightPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceRepository.swift; sourceTree = "<group>"; };
 		B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightPriceRepository.swift; sourceTree = "<group>"; };
+		B5823C822B3E04D000A795D0 /* LightPriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponse.swift; sourceTree = "<group>"; };
+		B5823C852B3E04E200A795D0 /* LightPriceResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponseDTO.swift; sourceTree = "<group>"; };
 		B586C29F2B3DCB63007F22FB /* LightPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceApp.swift; sourceTree = "<group>"; };
 		B586C2A42B3DCB63007F22FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B5823C732B3DFD8300A795D0 /* LightPrice */,
+				B5823C812B3E04BF00A795D0 /* LightPriceResponse */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -149,6 +154,23 @@
 				B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */,
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B5823C812B3E04BF00A795D0 /* LightPriceResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C822B3E04D000A795D0 /* LightPriceResponse.swift */,
+				B5823C842B3E04D300A795D0 /* DataTransfer */,
+			);
+			path = LightPriceResponse;
+			sourceTree = "<group>";
+		};
+		B5823C842B3E04D300A795D0 /* DataTransfer */ = {
+			isa = PBXGroup;
+			children = (
+				B5823C852B3E04E200A795D0 /* LightPriceResponseDTO.swift */,
+			);
+			path = DataTransfer;
 			sourceTree = "<group>";
 		};
 		B586C2962B3DCB63007F22FB = {
@@ -300,11 +322,13 @@
 				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
+				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
 				B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */,
+				B5823C832B3E04D000A795D0 /* LightPriceResponse.swift in Sources */,
 				B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
 			);

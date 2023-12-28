@@ -18,13 +18,14 @@ final class DefaultLightPriceRepository {
 
 extension DefaultLightPriceRepository: LightPriceRepository {
 
-    func getData(date: String) async -> Result<LightPrice, RequestError> {
+    func getData(date: String) async -> Result<[LightPrice], RequestError> {
         let endpoint = LightPriceEndpoints.data(date: date)
-        let result = await httpClient.request(endpoint: endpoint, responseModel: LightPriceDTO.self)
+        let result = await httpClient.request(endpoint: endpoint, responseModel: LightPriceResponseDTO.self)
 
         switch result {
         case .success(let response):
-            return .success(response.toDomain())
+            let prices = response.toDomain().prices
+            return .success(prices)
         case .failure(let error):
             return .failure(error)
         }

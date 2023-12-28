@@ -27,7 +27,7 @@ extension LightPriceDTO {
                    startHour: hour?.components(separatedBy: "-")[0] ?? "",
                    endHour: hour?.components(separatedBy: "-")[1] ?? "",
                    hourRange: hour ?? "-",
-                   peninsulaPrice: (Double(peninsulaPrice ?? "") ?? 0) / 100,
-                   ceutaMelillaPrice: (Double(ceutaMelillaPrice ?? "") ?? 0) / 100)
+                   peninsulaPrice: (Double(peninsulaPrice?.replacingOccurrences(of: ",", with: ".") ?? "") ?? 0) / 100,
+                   ceutaMelillaPrice: (Double(ceutaMelillaPrice?.replacingOccurrences(of: ",", with: ".") ?? "") ?? 0) / 100)
     }
 }
