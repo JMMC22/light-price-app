@@ -69,6 +69,9 @@
         }
       }
     },
+    "General View" : {
+
+    },
     "worst.hour.price.date %@" : {
       "extractionState" : "manual",
       "localizations" : {

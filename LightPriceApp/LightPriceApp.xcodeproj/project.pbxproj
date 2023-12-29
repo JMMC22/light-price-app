@@ -30,6 +30,8 @@
 		B5168A212B3EDD48007CD0D1 /* PriceProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A202B3EDD48007CD0D1 /* PriceProgressBar.swift */; };
 		B5168A242B3EE367007CD0D1 /* PriceProgressPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A232B3EE367007CD0D1 /* PriceProgressPanel.swift */; };
 		B5168A272B3EE742007CD0D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */; };
+		B5168A2B2B3EF303007CD0D1 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A2A2B3EF303007CD0D1 /* GeneralView.swift */; };
+		B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A2C2B3EF30D007CD0D1 /* GeneralViewModel.swift */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -76,6 +78,8 @@
 		B5168A202B3EDD48007CD0D1 /* PriceProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressBar.swift; sourceTree = "<group>"; };
 		B5168A232B3EE367007CD0D1 /* PriceProgressPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressPanel.swift; sourceTree = "<group>"; };
 		B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		B5168A2A2B3EF303007CD0D1 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
+		B5168A2C2B3EF30D007CD0D1 /* GeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewModel.swift; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				B5168A152B3EC67C007CD0D1 /* Components */,
 				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
 				B5168A252B3EE6BB007CD0D1 /* Localization */,
+				B5168A282B3EF2E0007CD0D1 /* Screens */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -238,6 +243,23 @@
 				B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		B5168A282B3EF2E0007CD0D1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A292B3EF2E8007CD0D1 /* General */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B5168A292B3EF2E8007CD0D1 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A2A2B3EF303007CD0D1 /* GeneralView.swift */,
+				B5168A2C2B3EF30D007CD0D1 /* GeneralViewModel.swift */,
+			);
+			path = General;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -511,6 +533,7 @@
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
+				B5168A2B2B3EF303007CD0D1 /* GeneralView.swift in Sources */,
 				B5168A242B3EE367007CD0D1 /* PriceProgressPanel.swift in Sources */,
 				B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */,
 				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
@@ -518,6 +541,7 @@
 				B5168A212B3EDD48007CD0D1 /* PriceProgressBar.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
 				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
+				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
