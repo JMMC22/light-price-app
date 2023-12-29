@@ -18,6 +18,9 @@ struct GeneralView: View {
 
     var body: some View {
         Text("General View")
+            .task {
+                await viewModel.viewDidLoad()
+            }
     }
 }
 
