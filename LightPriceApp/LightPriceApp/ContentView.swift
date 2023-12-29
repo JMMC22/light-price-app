@@ -14,7 +14,7 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-                .foregroundStyle(Color.customOrange)
+                .LPFont(.Roboto(24, weight: .bold), color: .customOrange)
         }
         .padding()
     }
