@@ -9,6 +9,10 @@ import Foundation
 
 class GeneralViewModel: ObservableObject {
 
+    @Published var currentPrice: LightPrice?
+    @Published var maxPrice: LightPrice?
+    @Published var minPrice: LightPrice?
+
     private let lightPriceRespository: LightPriceRepository
 
     init(lightPriceRespository: LightPriceRepository) {
@@ -32,7 +36,11 @@ extension GeneralViewModel {
     }
 
     private func fetchDataDidSuccess(_ response: LightPriceData) {
-        print("||DEBUG|| response count: \(response.prices.count)")
+        DispatchQueue.main.async {
+            self.currentPrice = response.currentPrice
+            self.maxPrice = response.maxPrice
+            self.minPrice = response.minPrice
+        }
     }
 
     private func fetchDataDidFail(_ error: RequestError) {

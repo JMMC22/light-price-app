@@ -1,6 +1,23 @@
 {
   "sourceLanguage" : "es",
   "strings" : {
+    "¡Bienvenido!" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Bienvenido!"
+          }
+        }
+      }
+    },
     "best.hour.price.date %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -35,19 +52,18 @@
         }
       }
     },
-    "currency.price %@" : {
-      "extractionState" : "manual",
+    "currency.price %lf" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ €/kWh"
+            "value" : "%lf €/kWh"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "%@ €/kWh"
+            "value" : "%lf €/kWh"
           }
         }
       }
@@ -69,8 +85,39 @@
         }
       }
     },
-    "General View" : {
-
+    "welcome.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discover the evolution of electricity prices by hours"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descubre la evolución de los precios de la luz por horas"
+          }
+        }
+      }
+    },
+    "welcome.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welcome!"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Bienvenido!"
+          }
+        }
+      }
     },
     "worst.hour.price.date %@" : {
       "extractionState" : "manual",

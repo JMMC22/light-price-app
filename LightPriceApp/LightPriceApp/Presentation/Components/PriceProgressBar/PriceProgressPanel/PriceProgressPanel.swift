@@ -8,16 +8,29 @@
 import SwiftUI
 
 struct PriceProgressPanel: View {
+    
+    @ObservedObject private var viewModel: PriceProgressPanelViewModel
+
+    init(currentPrice: Double? = 0.0,
+         minPrice: Double? = 0.0,
+         maxPrice: Double? = 0.0) {
+        self._viewModel = ObservedObject(wrappedValue: PriceProgressPanelViewModel(currentPrice: currentPrice,
+                                                                                   minPrice: minPrice,
+                                                                                   maxPrice: maxPrice))
+    }
+    
     var body: some View {
         VStack(spacing: 12) {
             Text("current.price")
                 .textCase(.uppercase)
                 .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
 
-            Text("currency.price \("0.181")")
+            Text("currency.price \(viewModel.currentPrice)")
                 .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
 
-            PriceProgressBar(currentValue: 0.181, minValue: 0.131, maxValue: 0.256)
+            PriceProgressBar(currentValue: viewModel.currentPrice,
+                             minValue: viewModel.minPrice,
+                             maxValue: viewModel.maxPrice)
 
             Divider()
         }

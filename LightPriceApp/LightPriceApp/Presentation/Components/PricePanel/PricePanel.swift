@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PricePanel: View {
 
-    @StateObject private var viewModel: PricePanelViewModel
+    @ObservedObject private var viewModel: PricePanelViewModel
 
     enum PricePanelType {
         case maxPrice
@@ -23,7 +23,7 @@ struct PricePanel: View {
          rangeHour: String,
          price: Double,
          type: PricePanel.PricePanelType) {
-        self._viewModel = StateObject(wrappedValue: PricePanelViewModel(date: date,
+        self._viewModel = ObservedObject(wrappedValue: PricePanelViewModel(date: date,
                                                                         rangeHour: rangeHour,
                                                                         price: price))
         self.type = type
