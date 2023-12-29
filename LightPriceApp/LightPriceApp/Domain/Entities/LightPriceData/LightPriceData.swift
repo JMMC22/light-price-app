@@ -11,17 +11,20 @@ struct LightPriceData {
 
     let date: String
     let prices: [LightPrice]
+    let currentPrice: LightPrice?
     let maxPrice: LightPrice?
     let minPrice: LightPrice?
     let avgPrice: Double
 
     init(date: String, 
          prices: [LightPrice],
-         maxPrice: LightPrice?, 
+         currentPrice: LightPrice?,
+         maxPrice: LightPrice?,
          minPrice: LightPrice?,
          avgPrice: Double) {
         self.date = date
         self.prices = prices
+        self.currentPrice = currentPrice
         self.maxPrice = maxPrice
         self.minPrice = minPrice
         self.avgPrice = avgPrice
@@ -30,6 +33,7 @@ struct LightPriceData {
     init(_ response: LightPriceResponse, date: String) {
         self.date = date
         self.prices = response.prices
+        self.currentPrice = response.currentPrice
         self.maxPrice = response.maxPrice
         self.minPrice = response.minPrice
         self.avgPrice = response.avgPrice
