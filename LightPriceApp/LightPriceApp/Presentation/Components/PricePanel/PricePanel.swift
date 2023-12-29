@@ -33,7 +33,7 @@ struct PricePanel: View {
         VStack(spacing: 12) {
             Text(title)
                 .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
-            Text(viewModel.rangeHour)
+            Text(viewModel.rangeHour + "h")
                 .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
             HStack(alignment: .center) {
                 Image(priceIcon)

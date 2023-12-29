@@ -8,7 +8,7 @@
 import Foundation
 
 class PriceProgressPanelViewModel: ObservableObject {
-    
+
     @Published var currentPrice: Double
     @Published var minPrice: Double
     @Published var maxPrice: Double

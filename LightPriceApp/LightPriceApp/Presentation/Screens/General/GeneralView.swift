@@ -61,14 +61,14 @@ struct GeneralViewContainer: View {
     }
 
     private var cheaperPricePanel: some View {
-        PricePanel(date: "-to do-", 
+        PricePanel(date: "26/12/2023",
                    rangeHour: viewModel.minPrice?.hourRange ?? "",
                    price: viewModel.minPrice?.peninsulaPrice ?? 0.0,
                    type: .minPrice)
     }
 
     private var moreExpensivePricePanel: some View {
-        PricePanel(date: "-to do-",
+        PricePanel(date: "26/12/2023",
                    rangeHour: viewModel.maxPrice?.hourRange ?? "",
                    price: viewModel.maxPrice?.peninsulaPrice ?? 0.0,
                    type: .maxPrice)
