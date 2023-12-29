@@ -27,6 +27,9 @@
 		B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A162B3EC73D007CD0D1 /* PricePanel.swift */; };
 		B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */; };
 		B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */; };
+		B5168A212B3EDD48007CD0D1 /* PriceProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A202B3EDD48007CD0D1 /* PriceProgressBar.swift */; };
+		B5168A242B3EE367007CD0D1 /* PriceProgressPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A232B3EE367007CD0D1 /* PriceProgressPanel.swift */; };
+		B5168A272B3EE742007CD0D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -70,6 +73,9 @@
 		B5168A162B3EC73D007CD0D1 /* PricePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanel.swift; sourceTree = "<group>"; };
 		B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanelViewModel.swift; sourceTree = "<group>"; };
 		B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		B5168A202B3EDD48007CD0D1 /* PriceProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressBar.swift; sourceTree = "<group>"; };
+		B5168A232B3EE367007CD0D1 /* PriceProgressPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressPanel.swift; sourceTree = "<group>"; };
+		B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -123,6 +129,7 @@
 			children = (
 				B5168A152B3EC67C007CD0D1 /* Components */,
 				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
+				B5168A252B3EE6BB007CD0D1 /* Localization */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 		B5168A152B3EC67C007CD0D1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B5168A1F2B3EDD19007CD0D1 /* PriceProgressBar */,
 				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
 			);
 			path = Components;
@@ -205,6 +213,31 @@
 				B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B5168A1F2B3EDD19007CD0D1 /* PriceProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A222B3EE357007CD0D1 /* PriceProgressPanel */,
+				B5168A202B3EDD48007CD0D1 /* PriceProgressBar.swift */,
+			);
+			path = PriceProgressBar;
+			sourceTree = "<group>";
+		};
+		B5168A222B3EE357007CD0D1 /* PriceProgressPanel */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A232B3EE367007CD0D1 /* PriceProgressPanel.swift */,
+			);
+			path = PriceProgressPanel;
+			sourceTree = "<group>";
+		};
+		B5168A252B3EE6BB007CD0D1 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -402,11 +435,12 @@
 			};
 			buildConfigurationList = B586C29A2B3DCB63007F22FB /* Build configuration list for PBXProject "LightPriceApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = B586C2962B3DCB63007F22FB;
 			productRefGroup = B586C2A02B3DCB63007F22FB /* Products */;
@@ -433,6 +467,7 @@
 				B5168A0A2B3EC39D007CD0D1 /* Roboto-BlackItalic.ttf in Resources */,
 				B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */,
 				B5168A0D2B3EC3A7007CD0D1 /* Roboto-Italic.ttf in Resources */,
+				B5168A272B3EE742007CD0D1 /* Localizable.xcstrings in Resources */,
 				B5168A0C2B3EC3A5007CD0D1 /* Roboto-BoldItalic.ttf in Resources */,
 				B5168A102B3EC3AE007CD0D1 /* Roboto-Medium.ttf in Resources */,
 				B5168A122B3EC3B2007CD0D1 /* Roboto-Regular.ttf in Resources */,
@@ -476,9 +511,11 @@
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
+				B5168A242B3EE367007CD0D1 /* PriceProgressPanel.swift in Sources */,
 				B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */,
 				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
 				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
+				B5168A212B3EDD48007CD0D1 /* PriceProgressBar.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
 				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
@@ -638,7 +675,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;
@@ -678,7 +715,7 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.6;

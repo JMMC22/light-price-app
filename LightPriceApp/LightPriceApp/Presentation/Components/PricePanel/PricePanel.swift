@@ -49,8 +49,9 @@ struct PricePanel: View {
         .frame(maxWidth: .infinity, alignment: .center)
     }
 
-    private var title: String {
-        return type == .maxPrice ? "La peor hora del \(viewModel.date)" : "La mejor hora del \(viewModel.date)"
+    private var title: LocalizedStringKey {
+        return type == .maxPrice ? "worst.hour.price.date \(viewModel.date)"
+                                 : "best.hour.price.date \(viewModel.date)"
     }
 
     private var priceColor: Color {
