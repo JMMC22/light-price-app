@@ -64,7 +64,7 @@ struct PricePanel: View {
 
 #Preview {
     VStack {
-        PricePanel(date: "2023-12-26", rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
-        PricePanel(date: "2023-12-26", rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
+        PricePanel(date: "26/12/2023", rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
+        PricePanel(date: "26/12/2023", rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
     }
 }

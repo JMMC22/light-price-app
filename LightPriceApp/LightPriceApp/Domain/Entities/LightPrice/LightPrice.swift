@@ -16,3 +16,10 @@ struct LightPrice {
     let peninsulaPrice: Double
     let ceutaMelillaPrice: Double
 }
+
+extension LightPrice {
+    var fullDate: String {
+        guard let date = DateFormatter.yearMonthDayFormatter.date(from: date) else { return date }
+        return DateFormatter.fullDateFormatter.string(from: date)
+    }
+}
