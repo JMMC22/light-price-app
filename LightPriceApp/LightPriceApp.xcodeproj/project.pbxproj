@@ -178,8 +178,6 @@
 			isa = PBXGroup;
 			children = (
 				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
-				B5168A162B3EC73D007CD0D1 /* PricePanel.swift */,
-				B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -187,6 +185,8 @@
 		B5168A1A2B3ECA75007CD0D1 /* PricePanel */ = {
 			isa = PBXGroup;
 			children = (
+				B5168A162B3EC73D007CD0D1 /* PricePanel.swift */,
+				B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */,
 			);
 			path = PricePanel;
 			sourceTree = "<group>";
