@@ -1,23 +1,6 @@
 {
   "sourceLanguage" : "es",
   "strings" : {
-    "¡Bienvenido!" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome!"
-          }
-        },
-        "es" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "¡Bienvenido!"
-          }
-        }
-      }
-    },
     "best.hour.price.date %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -48,6 +31,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mejor hora de hoy"
+          }
+        }
+      }
+    },
+    "currency.price %@" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ €/kWh"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ €/kWh"
           }
         }
       }

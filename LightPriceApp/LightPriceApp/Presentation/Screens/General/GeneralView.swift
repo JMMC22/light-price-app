@@ -48,7 +48,7 @@ struct GeneralViewContainer: View {
     private var welcomeDescription: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("welcome.title")
-                .LPFont(.Roboto(36, weight: .bold), color: .black)
+                .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
             Text("welcome.description")
                 .LPFont(.Roboto(18, weight: .bold), color: .gray)
         }

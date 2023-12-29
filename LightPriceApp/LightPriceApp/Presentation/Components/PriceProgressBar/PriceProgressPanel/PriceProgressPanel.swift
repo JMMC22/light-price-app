@@ -28,7 +28,7 @@ struct PriceProgressPanel: View {
             Text("currency.price \(viewModel.currentPrice)")
                 .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
 
-            PriceProgressBar(currentValue: viewModel.currentPrice,
+            PriceProgressBar(currentValue: Double(viewModel.currentPrice) ?? 0.0,
                              minValue: viewModel.minPrice,
                              maxValue: viewModel.maxPrice)
 
