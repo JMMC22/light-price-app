@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */; };
+		B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689F12B3EBD34007CD0D1 /* Colors.swift */; };
+		B51689F52B3EBD84007CD0D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51689F42B3EBD84007CD0D1 /* Colors.xcassets */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -31,6 +33,8 @@
 		84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.debug.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPriceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceData.swift; sourceTree = "<group>"; };
+		B51689F12B3EBD34007CD0D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B51689F42B3EBD84007CD0D1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -77,6 +81,31 @@
 				B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */,
 			);
 			path = LightPriceData;
+			sourceTree = "<group>";
+		};
+		B51689EF2B3EBD0B007CD0D1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B51689F02B3EBD20007CD0D1 /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				B51689F32B3EBD6C007CD0D1 /* Colors */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		B51689F32B3EBD6C007CD0D1 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				B51689F12B3EBD34007CD0D1 /* Colors.swift */,
+				B51689F42B3EBD84007CD0D1 /* Colors.xcassets */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -212,6 +241,7 @@
 				B5823C7C2B3E002900A795D0 /* Data */,
 				B5823C712B3DFCBC00A795D0 /* Domain */,
 				B51F4D322B3DF5F200D69D65 /* Infrastructure */,
+				B51689EF2B3EBD0B007CD0D1 /* Presentation */,
 				B586C2A92B3DCB64007F22FB /* Preview Content */,
 			);
 			path = LightPriceApp;
@@ -292,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51689F52B3EBD84007CD0D1 /* Colors.xcassets in Resources */,
 				B586C2AB2B3DCB64007F22FB /* Preview Assets.xcassets in Resources */,
 				B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */,
 			);
@@ -330,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */,
+				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
 				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
