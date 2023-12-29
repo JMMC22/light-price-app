@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LightPriceRepository {
-    func getData(date: String) async -> Result<[LightPrice], RequestError>
+    func getData(date: String) async -> Result<LightPriceData, RequestError>
 }

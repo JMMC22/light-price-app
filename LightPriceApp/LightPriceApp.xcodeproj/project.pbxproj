@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -29,6 +30,7 @@
 		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
 		84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.debug.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPriceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceData.swift; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 				2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B51689EC2B3EB6A4007CD0D1 /* LightPriceData */ = {
+			isa = PBXGroup;
+			children = (
+				B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */,
+			);
+			path = LightPriceData;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -110,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B5823C732B3DFD8300A795D0 /* LightPrice */,
+				B51689EC2B3EB6A4007CD0D1 /* LightPriceData */,
 				B5823C812B3E04BF00A795D0 /* LightPriceResponse */,
 			);
 			path = Entities;
@@ -330,6 +341,7 @@
 				B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */,
 				B5823C832B3E04D000A795D0 /* LightPriceResponse.swift in Sources */,
 				B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */,
+				B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
