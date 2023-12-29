@@ -40,6 +40,7 @@ struct GeneralViewContainer: View {
             currentPricePanel
             cheaperPricePanel
             moreExpensivePricePanel
+            priceList
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -72,5 +73,9 @@ struct GeneralViewContainer: View {
                    rangeHour: viewModel.maxPrice?.hourRange ?? "",
                    price: viewModel.maxPrice?.peninsulaPrice ?? 0.0,
                    type: .maxPrice)
+    }
+    
+    private var priceList: some View {
+        PriceList(prices: viewModel.allPrices)
     }
 }

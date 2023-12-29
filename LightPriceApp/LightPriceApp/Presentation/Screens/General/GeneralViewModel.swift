@@ -12,6 +12,7 @@ class GeneralViewModel: ObservableObject {
     @Published var currentPrice: LightPrice?
     @Published var maxPrice: LightPrice?
     @Published var minPrice: LightPrice?
+    @Published var allPrices: [LightPrice] = []
 
     private let lightPriceRespository: LightPriceRepository
 
@@ -40,6 +41,7 @@ extension GeneralViewModel {
             self.currentPrice = response.currentPrice
             self.maxPrice = response.maxPrice
             self.minPrice = response.minPrice
+            self.allPrices = response.prices
         }
     }
 

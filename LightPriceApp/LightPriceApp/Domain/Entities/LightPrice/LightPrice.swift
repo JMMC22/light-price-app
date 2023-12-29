@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LightPrice {
+struct LightPrice: Identifiable {
     let id = UUID()
     let date: String
     let startHour: String
