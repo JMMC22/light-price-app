@@ -25,18 +25,31 @@ struct PriceProgressBar: View {
                     )
                 
                 Circle()
-                    .fill()
-                    .frame(width: 25, height: 25)
+                    .fill(circleColor)
+                    .shadow(radius: 2)
+                    .frame(width: 30, height: 30)
                     .position(CGPoint(x: positionX * geometry.size.width, y: 10))
             }
-            .frame(height: 20)
         }
+        .frame(height: 20)
     }
 
     private var positionX: Double {
         let diference = maxValue - minValue
         let result = (currentValue - minValue) / diference
         return result
+    }
+
+    private var circleColor: Color {
+        let range = (maxValue - minValue) / 3
+
+        if currentValue < (minValue + range) {
+            return .customGreen
+        } else if currentValue > (maxValue - range) {
+            return .customRed
+        } else {
+            return .customOrange
+        }
     }
 }
 
