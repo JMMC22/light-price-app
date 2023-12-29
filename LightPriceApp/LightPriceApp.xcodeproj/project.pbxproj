@@ -24,6 +24,9 @@
 		B5168A122B3EC3B2007CD0D1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5168A012B3EC13C007CD0D1 /* Roboto-Regular.ttf */; };
 		B5168A132B3EC3B4007CD0D1 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5168A002B3EC13C007CD0D1 /* Roboto-Thin.ttf */; };
 		B5168A142B3EC3B6007CD0D1 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51689FC2B3EC13C007CD0D1 /* Roboto-ThinItalic.ttf */; };
+		B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A162B3EC73D007CD0D1 /* PricePanel.swift */; };
+		B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */; };
+		B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -64,6 +67,9 @@
 		B5168A052B3EC13D007CD0D1 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		B5168A062B3EC18A007CD0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B5168A072B3EC200007CD0D1 /* LPFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPFont.swift; sourceTree = "<group>"; };
+		B5168A162B3EC73D007CD0D1 /* PricePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanel.swift; sourceTree = "<group>"; };
+		B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanelViewModel.swift; sourceTree = "<group>"; };
+		B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -115,6 +121,7 @@
 		B51689EF2B3EBD0B007CD0D1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B5168A152B3EC67C007CD0D1 /* Components */,
 				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
 			);
 			path = Presentation;
@@ -165,6 +172,39 @@
 				B51689FC2B3EC13C007CD0D1 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		B5168A152B3EC67C007CD0D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B5168A1A2B3ECA75007CD0D1 /* PricePanel */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A162B3EC73D007CD0D1 /* PricePanel.swift */,
+				B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */,
+			);
+			path = PricePanel;
+			sourceTree = "<group>";
+		};
+		B5168A1B2B3ED3E9007CD0D1 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A1C2B3ED3F1007CD0D1 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B5168A1C2B3ED3F1007CD0D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -293,8 +333,8 @@
 		B586C2A12B3DCB63007F22FB /* LightPriceApp */ = {
 			isa = PBXGroup;
 			children = (
-				B5168A062B3EC18A007CD0D1 /* Info.plist */,
 				B586C2A82B3DCB64007F22FB /* LightPriceApp.entitlements */,
+				B5168A062B3EC18A007CD0D1 /* Info.plist */,
 				B586C2A42B3DCB63007F22FB /* ContentView.swift */,
 				B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */,
 				B586C2A62B3DCB64007F22FB /* Assets.xcassets */,
@@ -303,6 +343,7 @@
 				B51F4D322B3DF5F200D69D65 /* Infrastructure */,
 				B51689EF2B3EBD0B007CD0D1 /* Presentation */,
 				B586C2A92B3DCB64007F22FB /* Preview Content */,
+				B5168A1B2B3ED3E9007CD0D1 /* Utils */,
 			);
 			path = LightPriceApp;
 			sourceTree = "<group>";
@@ -434,13 +475,16 @@
 			files = (
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
+				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
 				B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */,
 				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
 				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
+				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
+				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
