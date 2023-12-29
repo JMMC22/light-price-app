@@ -24,6 +24,8 @@
 		B5168A122B3EC3B2007CD0D1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5168A012B3EC13C007CD0D1 /* Roboto-Regular.ttf */; };
 		B5168A132B3EC3B4007CD0D1 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B5168A002B3EC13C007CD0D1 /* Roboto-Thin.ttf */; };
 		B5168A142B3EC3B6007CD0D1 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51689FC2B3EC13C007CD0D1 /* Roboto-ThinItalic.ttf */; };
+		B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A162B3EC73D007CD0D1 /* PricePanel.swift */; };
+		B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */; };
 		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
@@ -64,6 +66,8 @@
 		B5168A052B3EC13D007CD0D1 /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
 		B5168A062B3EC18A007CD0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		B5168A072B3EC200007CD0D1 /* LPFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LPFont.swift; sourceTree = "<group>"; };
+		B5168A162B3EC73D007CD0D1 /* PricePanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanel.swift; sourceTree = "<group>"; };
+		B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricePanelViewModel.swift; sourceTree = "<group>"; };
 		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 		B51689EF2B3EBD0B007CD0D1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B5168A152B3EC67C007CD0D1 /* Components */,
 				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
 			);
 			path = Presentation;
@@ -165,6 +170,23 @@
 				B51689FC2B3EC13C007CD0D1 /* Roboto-ThinItalic.ttf */,
 			);
 			path = Roboto;
+			sourceTree = "<group>";
+		};
+		B5168A152B3EC67C007CD0D1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
+				B5168A162B3EC73D007CD0D1 /* PricePanel.swift */,
+				B5168A182B3ECA72007CD0D1 /* PricePanelViewModel.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B5168A1A2B3ECA75007CD0D1 /* PricePanel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PricePanel;
 			sourceTree = "<group>";
 		};
 		B51F4D322B3DF5F200D69D65 /* Infrastructure */ = {
@@ -438,9 +460,11 @@
 				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
 				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
 				B5823C7B2B3E000900A795D0 /* LightPriceRepository.swift in Sources */,
+				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
+				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
