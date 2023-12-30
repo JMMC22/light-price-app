@@ -68,19 +68,19 @@
         }
       }
     },
-    "current.price" : {
+    "current.price %@" : {
       "extractionState" : "manual",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "Current Price"
+            "state" : "needs_review",
+            "value" : "Current Price at %@"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Precio Actual"
+            "value" : "Precio Actual a las %@"
           }
         }
       }

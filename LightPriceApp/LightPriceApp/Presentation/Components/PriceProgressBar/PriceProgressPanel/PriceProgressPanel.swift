@@ -21,7 +21,7 @@ struct PriceProgressPanel: View {
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("current.price")
+            Text("current.price \(Date().getHour())")
                 .textCase(.uppercase)
                 .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
 

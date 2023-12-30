@@ -51,6 +51,7 @@
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
 		B586C2AB2B3DCB64007F22FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */; };
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
+		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +106,7 @@
 		B586C2A82B3DCB64007F22FB /* LightPriceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightPriceApp.entitlements; sourceTree = "<group>"; };
 		B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
+		B5BB560C2B4010EF00669F76 /* Date+getHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getHour.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,7 +226,7 @@
 		B5168A1C2B3ED3F1007CD0D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */,
+				B5BB560E2B40113700669F76 /* Date */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +457,15 @@
 			path = LightPriceStatus;
 			sourceTree = "<group>";
 		};
+		B5BB560E2B40113700669F76 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				B5168A1D2B3ED3FD007CD0D1 /* DateFormatterExtension.swift */,
+				B5BB560C2B4010EF00669F76 /* Date+getHour.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		E38CFA51760552FB46E16B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +603,7 @@
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
+				B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
 				B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */,

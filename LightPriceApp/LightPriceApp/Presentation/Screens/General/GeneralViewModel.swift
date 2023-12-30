@@ -13,21 +13,24 @@ class GeneralViewModel: ObservableObject {
     @Published var maxPrice: LightPrice?
     @Published var minPrice: LightPrice?
     @Published var allPrices: [LightPrice] = []
+    @Published var date: String = DateFormatter.fullDateFormatter.string(from: Date())
 
     private let lightPriceRespository: LightPriceRepository
+    private var formattedDate: String = ""
 
     init(lightPriceRespository: LightPriceRepository) {
         self.lightPriceRespository = lightPriceRespository
     }
 
     func viewDidLoad() async {
-        await fetchData("2023-12-29")
+        await fetchData(date)
     }
 }
 
 extension GeneralViewModel {
     func fetchData(_ date: String) async {
-        let result = await lightPriceRespository.getData(date: date)
+        parseDate(date)
+        let result = await lightPriceRespository.getData(date: formattedDate)
         switch result {
         case .success(let response):
             fetchDataDidSuccess(response)
@@ -47,5 +50,11 @@ extension GeneralViewModel {
 
     private func fetchDataDidFail(_ error: RequestError) {
         print("||ERROR|| fetchData: \(error.customDescription)")
+    }
+
+    private func parseDate(_ date: String) {
+        if let currentDate = DateFormatter.fullDateFormatter.date(from: date) {
+            formattedDate = DateFormatter.yearMonthDayFormatter.string(from: currentDate)
+        }
     }
 }
