@@ -50,6 +50,7 @@
 		B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A42B3DCB63007F22FB /* ContentView.swift */; };
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
 		B586C2AB2B3DCB64007F22FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */; };
+		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		B586C2A62B3DCB64007F22FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B586C2A82B3DCB64007F22FB /* LightPriceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightPriceApp.entitlements; sourceTree = "<group>"; };
 		B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +337,7 @@
 		B5823C722B3DFCC600A795D0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B5BB56092B400B0100669F76 /* LightPriceStatus */,
 				B5823C732B3DFD8300A795D0 /* LightPrice */,
 				B51689EC2B3EB6A4007CD0D1 /* LightPriceData */,
 				B5823C812B3E04BF00A795D0 /* LightPriceResponse */,
@@ -442,6 +445,14 @@
 				B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B5BB56092B400B0100669F76 /* LightPriceStatus */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */,
+			);
+			path = LightPriceStatus;
 			sourceTree = "<group>";
 		};
 		E38CFA51760552FB46E16B9F /* Frameworks */ = {
@@ -563,6 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,

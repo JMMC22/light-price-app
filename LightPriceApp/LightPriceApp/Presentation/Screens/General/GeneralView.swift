@@ -76,6 +76,12 @@ struct GeneralViewContainer: View {
     }
     
     private var priceList: some View {
-        PriceList(prices: viewModel.allPrices)
+        VStack(spacing: 16) {
+            Text("general.price.list.title")
+                .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
+            PriceList(prices: viewModel.allPrices,
+                      maxPrice: viewModel.maxPrice,
+                      minPrice: viewModel.minPrice)
+        }
     }
 }

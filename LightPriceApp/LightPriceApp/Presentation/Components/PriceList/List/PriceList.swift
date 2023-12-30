@@ -9,13 +9,17 @@ import SwiftUI
 
 struct PriceList: View {
 
-    var prices: [LightPrice]
+    let prices: [LightPrice]
+    let maxPrice: LightPrice?
+    let minPrice: LightPrice?
 
     var body: some View {
         VStack {
             ForEach(prices) { price in
                 PriceItemList(hourRange: price.hourRange,
-                              price: price.peninsulaPrice)
+                              price: price.peninsulaPrice,
+                              status: price.getStatus(maxPrice: maxPrice?.peninsulaPrice ?? 0.0,
+                                                      minPrice: minPrice?.peninsulaPrice ?? 0.0))
             }
         }
     }

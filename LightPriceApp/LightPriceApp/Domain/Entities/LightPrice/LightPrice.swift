@@ -23,3 +23,17 @@ extension LightPrice {
         return DateFormatter.fullDateFormatter.string(from: date)
     }
 }
+
+extension LightPrice {
+    func getStatus(maxPrice: Double, minPrice: Double) -> LightPriceStatus {
+        let range = (maxPrice - minPrice) / 3
+
+        if peninsulaPrice < (minPrice + range) {
+            return .low
+        } else if peninsulaPrice > (maxPrice - range) {
+            return .high
+        } else {
+            return .medium
+        }
+    }
+}

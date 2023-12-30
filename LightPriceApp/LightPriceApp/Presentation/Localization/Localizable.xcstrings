@@ -85,6 +85,23 @@
         }
       }
     },
+    "general.price.list.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price list by hours"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listado de precios por horas"
+          }
+        }
+      }
+    },
     "welcome.description" : {
       "extractionState" : "manual",
       "localizations" : {
