@@ -14,8 +14,8 @@ struct LightPriceResponse {
 extension LightPriceResponse {
 
     var currentPrice: LightPrice? {
-        let currentHour = Calendar.current.component(.hour, from: Date())
-        return prices.first(where: { $0.startHour == String(currentHour) })
+        let currentHour = String(format: "%02d", Calendar.current.component(.hour, from: Date()))
+        return prices.first(where: { $0.startHour == currentHour })
     }
     var maxPrice: LightPrice? {
         return prices.max(by: { $0.peninsulaPrice < $1.peninsulaPrice })
