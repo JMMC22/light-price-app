@@ -33,7 +33,6 @@ struct GeneralView: View {
 struct GeneralViewContainer: View {
 
     @ObservedObject var viewModel: GeneralViewModel
-    @State private var selectedDate = Date()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -43,6 +42,11 @@ struct GeneralViewContainer: View {
             cheaperPricePanel
             moreExpensivePricePanel
             priceList
+        }
+        .onChange(of: viewModel.selectedDate) { _ in
+            Task {
+                await viewModel.viewDidLoad()
+            }
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -58,7 +62,7 @@ struct GeneralViewContainer: View {
     }
 
     private var calendarDrodpown: some View {
-        CalendarDropdown(selectedDate: $selectedDate)
+        CalendarDropdown(selectedDate: $viewModel.selectedDate)
             .zIndex(1)
     }
 
@@ -69,14 +73,14 @@ struct GeneralViewContainer: View {
     }
 
     private var cheaperPricePanel: some View {
-        PricePanel(date: viewModel.date,
+        PricePanel(date: viewModel.selectedDate,
                    rangeHour: viewModel.minPrice?.hourRange ?? "",
                    price: viewModel.minPrice?.peninsulaPrice ?? 0.0,
                    type: .minPrice)
     }
 
     private var moreExpensivePricePanel: some View {
-        PricePanel(date: viewModel.date,
+        PricePanel(date: viewModel.selectedDate,
                    rangeHour: viewModel.maxPrice?.hourRange ?? "",
                    price: viewModel.maxPrice?.peninsulaPrice ?? 0.0,
                    type: .maxPrice)

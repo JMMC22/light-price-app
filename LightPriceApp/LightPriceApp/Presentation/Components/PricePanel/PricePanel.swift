@@ -19,7 +19,7 @@ struct PricePanel: View {
 
     private let type: PricePanelType
 
-    init(date: String, 
+    init(date: Date,
          rangeHour: String,
          price: Double,
          type: PricePanel.PricePanelType) {
@@ -65,7 +65,7 @@ struct PricePanel: View {
 
 #Preview {
     VStack {
-        PricePanel(date: "26/12/2023", rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
-        PricePanel(date: "26/12/2023", rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
+        PricePanel(date: Date(), rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
+        PricePanel(date: Date(), rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
     }
 }

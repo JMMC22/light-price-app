@@ -13,8 +13,8 @@ class PricePanelViewModel: ObservableObject {
     @Published var rangeHour: String
     @Published var price: Double
 
-    init(date: String, rangeHour: String, price: Double) {
-        self.date = date
+    init(date: Date, rangeHour: String, price: Double) {
+        self.date = DateFormatter.fullDateFormatter.string(from: date)
         self.rangeHour = rangeHour
         self.price = price
     }
