@@ -33,10 +33,12 @@ struct GeneralView: View {
 struct GeneralViewContainer: View {
 
     @ObservedObject var viewModel: GeneralViewModel
-
+    @State private var selectedDate = Date()
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             welcomeDescription
+            calendarDrodpown
             currentPricePanel
             cheaperPricePanel
             moreExpensivePricePanel
@@ -53,6 +55,11 @@ struct GeneralViewContainer: View {
             Text("welcome.description")
                 .LPFont(.Roboto(18, weight: .bold), color: .gray)
         }
+    }
+
+    private var calendarDrodpown: some View {
+        CalendarDropdown(selectedDate: $selectedDate)
+            .zIndex(1)
     }
 
     private var currentPricePanel: some View {

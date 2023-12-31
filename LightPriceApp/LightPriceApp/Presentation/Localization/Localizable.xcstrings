@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "es",
   "strings" : {
+    "" : {
+
+    },
     "best.hour.price.date %@" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -52,6 +52,7 @@
 		B586C2AB2B3DCB64007F22FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */; };
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
+		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
 		B5BB560C2B4010EF00669F76 /* Date+getHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getHour.swift"; sourceTree = "<group>"; };
+		B5BB56102B40166900669F76 /* CalendarDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 		B5168A152B3EC67C007CD0D1 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B5BB560F2B40163D00669F76 /* Dropdown */,
 				B530FB742B3F3F3A004297E3 /* PriceList */,
 				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
 				B5168A1F2B3EDD19007CD0D1 /* PriceProgressBar */,
@@ -466,6 +469,14 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		B5BB560F2B40163D00669F76 /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				B5BB56102B40166900669F76 /* CalendarDropdown.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
 		E38CFA51760552FB46E16B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -613,6 +624,7 @@
 				B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */,
 				B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
+				B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */,
 				B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
