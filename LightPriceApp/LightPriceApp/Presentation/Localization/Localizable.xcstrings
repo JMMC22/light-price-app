@@ -105,6 +105,9 @@
         }
       }
     },
+    "HOLA" : {
+
+    },
     "welcome.description" : {
       "extractionState" : "manual",
       "localizations" : {
