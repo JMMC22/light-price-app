@@ -8,17 +8,17 @@
 import Foundation
 import UserNotifications
 
-class LocalNotificationsManager {
+class LocalNotificationsManager: ObservableObject {
 
     static let sharedInstance = LocalNotificationsManager()
 
-    func requestPermissions() {
-        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
-            if granted, error != nil {
-                print("||DEBUG|| Granted notifications permissions")
-            } else {
-                print("||ERROR|| Denied notifications permissions")
-            }
+    private let notificationCenter = UNUserNotificationCenter.current()
+
+    private init() {}
+
+    func requestPermissions(completion: @escaping (Bool) -> Void) {
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            completion(granted)
         }
     }
 }

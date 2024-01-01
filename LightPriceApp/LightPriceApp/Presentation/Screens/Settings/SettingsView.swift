@@ -17,7 +17,7 @@ struct SettingsView: View {
 
     var body: some View {
         ScrollView {
-            SettingsContainerView()
+            SettingsContainerView(viewModel: viewModel)
         }
     }
 }
@@ -27,6 +27,8 @@ struct SettingsView: View {
 }
 
 struct SettingsContainerView: View {
+
+    @ObservedObject var viewModel: SettingsViewModel
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -45,7 +47,9 @@ struct SettingsContainerView: View {
     private var content: some View {
         VStack {
             SettingsSection(title: "Notificaciones") {
-                Text("TO DO: Notifications switch")
+                Button("Permisos") {
+                    viewModel.requestLocalNotificationsPermissions()
+                }
             }
         }
     }

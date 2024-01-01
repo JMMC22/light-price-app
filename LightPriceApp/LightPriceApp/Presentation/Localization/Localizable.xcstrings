@@ -108,6 +108,9 @@
     "Home" : {
 
     },
+    "Permisos" : {
+
+    },
     "Settings" : {
 
     },
@@ -127,9 +130,6 @@
           }
         }
       }
-    },
-    "TO DO: Notifications switch" : {
-
     },
     "welcome.description" : {
       "extractionState" : "manual",

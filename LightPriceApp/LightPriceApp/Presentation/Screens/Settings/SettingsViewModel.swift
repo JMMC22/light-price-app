@@ -7,4 +7,15 @@
 
 import Foundation
 
-class SettingsViewModel: ObservableObject {}
+class SettingsViewModel: ObservableObject {
+
+    func requestLocalNotificationsPermissions() {
+        LocalNotificationsManager.sharedInstance.requestPermissions { granted in
+            if granted {
+                print("||DEBUG|| TO DO: Schedule daily notification")
+            } else {
+                print("||DEBUG|| Denied permissions")
+            }
+        }
+    }
+}
