@@ -46,10 +46,29 @@ struct SettingsContainerView: View {
 
     private var content: some View {
         VStack {
-            SettingsSection(title: "Notificaciones") {
-                Button("Permisos") {
-                    viewModel.requestLocalNotificationsPermissions()
+            NotificationsSettingsSectionView(viewModel: viewModel)
+        }
+    }
+}
+
+struct NotificationsSettingsSectionView: View {
+
+    @ObservedObject var viewModel: SettingsViewModel
+
+    @State private var dailyNotificationIsOn: Bool = false
+
+    var body: some View {
+        SettingsSection(title: "notifications") {
+            Toggle(isOn: $dailyNotificationIsOn) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("daily.notifications")
+                        .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                    Text("daily.notification.description")
+                        .LPFont(.Roboto(12, weight: .regular), color: .gray)
                 }
+            }
+            .onChange(of: dailyNotificationIsOn) { value in
+                print("||DEBUG|| Daily notification is \(value)")
             }
         }
     }

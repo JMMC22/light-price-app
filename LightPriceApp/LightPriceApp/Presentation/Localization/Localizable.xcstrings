@@ -88,6 +88,40 @@
         }
       }
     },
+    "daily.notification.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You will receive a notification every day at 9:00 p.m. with the next day's available prices"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recibirás una notificación todos los días a las 21h con los precios del día siguiente disponibles"
+          }
+        }
+      }
+    },
+    "daily.notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daily notification"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificación diaria"
+          }
+        }
+      }
+    },
     "general.price.list.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -108,8 +142,22 @@
     "Home" : {
 
     },
-    "Permisos" : {
-
+    "notifications" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notifications"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notificaciones"
+          }
+        }
+      }
     },
     "Settings" : {
 
