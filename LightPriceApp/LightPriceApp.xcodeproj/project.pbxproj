@@ -54,6 +54,7 @@
 		B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C852C2B432A0A00D00CEB /* SettingsViewModel.swift */; };
 		B59C85312B432BE300D00CEB /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C85302B432BE300D00CEB /* SettingsSection.swift */; };
 		B59C85342B432EF400D00CEB /* LocalNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C85332B432EF400D00CEB /* LocalNotificationsManager.swift */; };
+		B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C85362B43361900D00CEB /* LocalNotification.swift */; };
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
@@ -114,6 +115,7 @@
 		B59C852C2B432A0A00D00CEB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B59C85302B432BE300D00CEB /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
 		B59C85332B432EF400D00CEB /* LocalNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationsManager.swift; sourceTree = "<group>"; };
+		B59C85362B43361900D00CEB /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
 		B5BB560C2B4010EF00669F76 /* Date+getHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getHour.swift"; sourceTree = "<group>"; };
 		B5BB56102B40166900669F76 /* CalendarDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDropdown.swift; sourceTree = "<group>"; };
@@ -483,9 +485,18 @@
 		B59C85322B432EDF00D00CEB /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				B59C85332B432EF400D00CEB /* LocalNotificationsManager.swift */,
+				B59C85352B43360900D00CEB /* LocalNotifications */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		B59C85352B43360900D00CEB /* LocalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				B59C85332B432EF400D00CEB /* LocalNotificationsManager.swift */,
+				B59C85362B43361900D00CEB /* LocalNotification.swift */,
+			);
+			path = LocalNotifications;
 			sourceTree = "<group>";
 		};
 		B5BB56092B400B0100669F76 /* LightPriceStatus */ = {
@@ -650,6 +661,7 @@
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
+				B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */,
