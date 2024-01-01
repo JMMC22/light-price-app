@@ -16,10 +16,37 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        Text("Settings")
+        ScrollView {
+            SettingsContainerView()
+        }
     }
 }
 
 #Preview {
     SettingsView()
+}
+
+struct SettingsContainerView: View {
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 24) {
+            title
+            content
+        }
+        .padding(16)
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+    
+    private var title: some View {
+        Text("settings.title")
+            .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+    }
+
+    private var content: some View {
+        VStack {
+            SettingsSection(title: "Notificaciones") {
+                Text("TO DO: Notifications switch")
+            }
+        }
+    }
 }

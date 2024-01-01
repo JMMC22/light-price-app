@@ -111,6 +111,26 @@
     "Settings" : {
 
     },
+    "settings.title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
+          }
+        }
+      }
+    },
+    "TO DO: Notifications switch" : {
+
+    },
     "welcome.description" : {
       "extractionState" : "manual",
       "localizations" : {
