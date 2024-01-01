@@ -11,17 +11,23 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-
-            GeneralView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-            Text("Settings")
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+            homeTab
+            settingsTab
         }
+    }
+
+    private var homeTab: some View {
+        GeneralView()
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+    }
+
+    private var settingsTab: some View {
+        SettingsView()
+            .tabItem {
+                Label("Settings", systemImage: "gear")
+            }
     }
 }
 

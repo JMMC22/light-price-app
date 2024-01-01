@@ -50,6 +50,8 @@
 		B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A42B3DCB63007F22FB /* ContentView.swift */; };
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
 		B586C2AB2B3DCB64007F22FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */; };
+		B59C852B2B432A0100D00CEB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C852A2B432A0100D00CEB /* SettingsView.swift */; };
+		B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59C852C2B432A0A00D00CEB /* SettingsViewModel.swift */; };
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
@@ -106,6 +108,8 @@
 		B586C2A62B3DCB64007F22FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B586C2A82B3DCB64007F22FB /* LightPriceApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LightPriceApp.entitlements; sourceTree = "<group>"; };
 		B586C2AA2B3DCB64007F22FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B59C852A2B432A0100D00CEB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B59C852C2B432A0A00D00CEB /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
 		B5BB560C2B4010EF00669F76 /* Date+getHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getHour.swift"; sourceTree = "<group>"; };
 		B5BB56102B40166900669F76 /* CalendarDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDropdown.swift; sourceTree = "<group>"; };
@@ -264,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				B5168A292B3EF2E8007CD0D1 /* General */,
+				B59C85292B4329F200D00CEB /* Settings */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -452,6 +457,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B59C85292B4329F200D00CEB /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B59C852A2B432A0100D00CEB /* SettingsView.swift */,
+				B59C852C2B432A0A00D00CEB /* SettingsViewModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		B5BB56092B400B0100669F76 /* LightPriceStatus */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,6 +625,7 @@
 				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
+				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
@@ -625,6 +640,7 @@
 				B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
 				B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */,
+				B59C852B2B432A0100D00CEB /* SettingsView.swift in Sources */,
 				B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
