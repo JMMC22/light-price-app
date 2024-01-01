@@ -105,6 +105,12 @@
         }
       }
     },
+    "Home" : {
+
+    },
+    "Settings" : {
+
+    },
     "welcome.description" : {
       "extractionState" : "manual",
       "localizations" : {
