@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LightPrice {
+struct LightPrice: Identifiable {
     let id = UUID()
     let date: String
     let startHour: String
@@ -21,5 +21,19 @@ extension LightPrice {
     var fullDate: String {
         guard let date = DateFormatter.yearMonthDayFormatter.date(from: date) else { return date }
         return DateFormatter.fullDateFormatter.string(from: date)
+    }
+}
+
+extension LightPrice {
+    func getStatus(maxPrice: Double, minPrice: Double) -> LightPriceStatus {
+        let range = (maxPrice - minPrice) / 3
+
+        if peninsulaPrice < (minPrice + range) {
+            return .low
+        } else if peninsulaPrice > (maxPrice - range) {
+            return .high
+        } else {
+            return .medium
+        }
     }
 }

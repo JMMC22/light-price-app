@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PricePanel: View {
 
-    @StateObject private var viewModel: PricePanelViewModel
+    @ObservedObject private var viewModel: PricePanelViewModel
 
     enum PricePanelType {
         case maxPrice
@@ -19,11 +19,11 @@ struct PricePanel: View {
 
     private let type: PricePanelType
 
-    init(date: String, 
+    init(date: Date,
          rangeHour: String,
          price: Double,
          type: PricePanel.PricePanelType) {
-        self._viewModel = StateObject(wrappedValue: PricePanelViewModel(date: date,
+        self._viewModel = ObservedObject(wrappedValue: PricePanelViewModel(date: date,
                                                                         rangeHour: rangeHour,
                                                                         price: price))
         self.type = type
@@ -33,7 +33,7 @@ struct PricePanel: View {
         VStack(spacing: 12) {
             Text(title)
                 .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
-            Text(viewModel.rangeHour)
+            Text(viewModel.rangeHour + "h")
                 .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
             HStack(alignment: .center) {
                 Image(priceIcon)
@@ -65,7 +65,7 @@ struct PricePanel: View {
 
 #Preview {
     VStack {
-        PricePanel(date: "26/12/2023", rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
-        PricePanel(date: "26/12/2023", rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
+        PricePanel(date: Date(), rangeHour: "12h - 13h", price: 0.256, type: .maxPrice)
+        PricePanel(date: Date(), rangeHour: "20h - 21h", price: 1.256, type: .minPrice)
     }
 }
