@@ -45,8 +45,9 @@ struct SettingsContainerView: View {
     }
 
     private var content: some View {
-        VStack {
+        VStack(spacing: 24) {
             NotificationsSettingsSectionView(viewModel: viewModel)
+            AppearanceSettingsSectionView(viewModel: viewModel)
         }
     }
 }
@@ -69,6 +70,28 @@ struct NotificationsSettingsSectionView: View {
             }
             .onChange(of: dailyNotificationIsOn) { value in
                 viewModel.configureDailyNotification(value)
+            }
+        }
+    }
+}
+
+struct AppearanceSettingsSectionView: View {
+
+    @ObservedObject var viewModel: SettingsViewModel
+
+    @State private var darkModeIsOn: Bool = UserDefaults.standard.bool(forKey: "darkMode")
+
+    var body: some View {
+        SettingsSection(title: "appearance") {
+            Toggle(isOn: $darkModeIsOn) {
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("dark.mode.appearance")
+                        .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                }
+            }
+            .onChange(of: darkModeIsOn) { value in
+                viewModel.configureDarkMode(value)
+                darkModeIsOn = value
             }
         }
     }

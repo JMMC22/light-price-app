@@ -4,6 +4,23 @@
     "" : {
 
     },
+    "appearance" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appearance"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apariencia"
+          }
+        }
+      }
+    },
     "best.hour.price.date %@" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -122,6 +139,22 @@
         }
       }
     },
+    "dark.mode.appearance" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dark mode"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo oscuro"
+          }
+        }
+      }
+    },
     "general.price.list.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -141,6 +174,12 @@
     },
     "Home" : {
 
+    },
+    "Key" : {
+      "extractionState" : "manual"
+    },
+    "Key 1" : {
+      "extractionState" : "manual"
     },
     "notifications" : {
       "extractionState" : "manual",

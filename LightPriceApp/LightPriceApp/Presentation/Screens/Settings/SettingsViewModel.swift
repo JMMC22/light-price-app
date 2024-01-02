@@ -31,4 +31,8 @@ class SettingsViewModel: ObservableObject {
             LocalNotificationsManager.sharedInstance.cancelNotification(withIdentifier: "dailyNotification")
         }
     }
+
+    func configureDarkMode(_ value: Bool) {
+        UserDefaults.standard.set(value, forKey: "darkMode")
+    }
 }
