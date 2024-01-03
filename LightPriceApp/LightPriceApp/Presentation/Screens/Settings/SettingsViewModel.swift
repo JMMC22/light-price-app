@@ -20,8 +20,9 @@ class SettingsViewModel: ObservableObject {
     }
 
     func configureDailyNotification(_ value: Bool) {
+        UserDefaults.standard.set(value, forKey: "dailyNotification")
         if value {
-            let dailyNotification = LocalNotification(id: "dailyNotification", 
+            let dailyNotification = LocalNotification(id: "dailyNotification",
                                                       title: "Nuevos precios disponibles",
                                                       body: "¡Ya puede consultar los precios de la luz para mañana!", 
                                                       hour: 21,

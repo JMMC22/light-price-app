@@ -56,7 +56,7 @@ struct NotificationsSettingsSectionView: View {
 
     @ObservedObject var viewModel: SettingsViewModel
 
-    @AppStorage("dailyNotification") private var dailyNotificationIsOn: Bool = false
+    @State private var dailyNotificationIsOn: Bool = UserDefaults.standard.bool(forKey: "dailyNotification")
 
     var body: some View {
         SettingsSection(title: "notifications") {
@@ -69,7 +69,11 @@ struct NotificationsSettingsSectionView: View {
                 }
             }
             .onChange(of: dailyNotificationIsOn) { value in
-                viewModel.configureDailyNotification(value)
+                if value {
+                    viewModel.requestLocalNotificationsPermissions()
+                } else {
+                    viewModel.configureDailyNotification(false)
+                }
             }
         }
     }
