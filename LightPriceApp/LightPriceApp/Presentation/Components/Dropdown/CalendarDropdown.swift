@@ -12,9 +12,20 @@ struct CalendarDropdown: View {
     @Binding var selectedDate: Date
     @State private var showDatePicker = false
 
+    private var calendarLimit: PartialRangeThrough<Date> {
+        let currentDate = Date()
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: currentDate) ?? currentDate
+        let endDate = DateFormatter.hour.string(from: currentDate) >= "21" ? tomorrow : currentDate
+        return ...endDate
+    }
+
     var body: some View {
         dropdown
             .overlay(overlayDatePicker, alignment: .topLeading)
+            .onAppear {
+                let time = DateFormatter.hour.string(from: Date())
+                let _ = print(time)
+            }
     }
 
     private var dropdown: some View {
@@ -43,7 +54,7 @@ struct CalendarDropdown: View {
     }
 
     private var datePicker: some View {
-        DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+        DatePicker("", selection: $selectedDate, in: calendarLimit, displayedComponents: [.date])
             .datePickerStyle(.graphical)
             .background(Color.customWhite)
             .border(Color.gray.opacity(0.4))
