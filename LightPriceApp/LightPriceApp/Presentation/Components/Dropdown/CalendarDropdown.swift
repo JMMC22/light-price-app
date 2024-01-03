@@ -56,6 +56,7 @@ struct CalendarDropdown: View {
     private var datePicker: some View {
         DatePicker("", selection: $selectedDate, in: calendarLimit, displayedComponents: [.date])
             .datePickerStyle(.graphical)
+            .padding()
             .background(Color.customWhite)
             .border(Color.gray.opacity(0.4))
             .onChange(of: selectedDate) { _ in
