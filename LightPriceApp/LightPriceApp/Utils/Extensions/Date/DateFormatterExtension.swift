@@ -22,4 +22,12 @@ extension DateFormatter {
         dateFormatter.dateFormat = "yyyy-MM-dd"
         return dateFormatter
     }()
+
+    static let hour: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "es_ES")
+        dateFormatter.timeZone = TimeZone(identifier: "Europe/Madrid")
+        dateFormatter.dateFormat = "HH"
+        return dateFormatter
+    }()
 }
