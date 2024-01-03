@@ -11,17 +11,21 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-
-            GeneralView()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-            Text("Settings")
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+            Group {
+                GeneralView()
+                    .tabItem {
+                        Label("content.home", systemImage: "house")
+                    }
+                
+                Text("Settings")
+                    .tabItem {
+                        Label("content.settings", systemImage: "gear")
+                    }
+            }
+            .toolbarBackground(Color.customWhite, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
         }
+        .tint(.customBlack)
     }
 }
 
