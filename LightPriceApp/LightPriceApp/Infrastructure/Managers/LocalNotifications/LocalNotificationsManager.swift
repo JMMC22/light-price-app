@@ -32,6 +32,9 @@ class LocalNotificationsManager: ObservableObject {
         dateComponents.hour = notification.hour
         dateComponents.minute = notification.minute
 
+        let timeZone = TimeZone(identifier: "Europe/Madrid")
+        dateComponents.timeZone = timeZone
+
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: notification.repeats)
 
         let request = UNNotificationRequest(identifier: notification.id, content: content, trigger: trigger)
