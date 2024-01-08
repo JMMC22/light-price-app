@@ -58,8 +58,19 @@
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
+		B5D335B72B4C5279001B96A7 /* LightPriceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5D335B82B4C5279001B96A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B586C2972B3DCB63007F22FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B586C29E2B3DCB63007F22FB;
+			remoteInfo = LightPriceApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +130,8 @@
 		B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceStatus.swift; sourceTree = "<group>"; };
 		B5BB560C2B4010EF00669F76 /* Date+getHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+getHour.swift"; sourceTree = "<group>"; };
 		B5BB56102B40166900669F76 /* CalendarDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDropdown.swift; sourceTree = "<group>"; };
+		B5D335B42B4C5279001B96A7 /* LightPriceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightPriceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceAppTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +140,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D335B12B4C5279001B96A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				B586C2A12B3DCB63007F22FB /* LightPriceApp */,
+				B5D335B52B4C5279001B96A7 /* LightPriceAppTests */,
 				B586C2A02B3DCB63007F22FB /* Products */,
 				1DB56DF3BED2DC0A5AF3B60B /* Pods */,
 				E38CFA51760552FB46E16B9F /* Frameworks */,
@@ -435,6 +456,7 @@
 			isa = PBXGroup;
 			children = (
 				B586C29F2B3DCB63007F22FB /* LightPriceApp.app */,
+				B5D335B42B4C5279001B96A7 /* LightPriceAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -524,6 +546,14 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
+		B5D335B52B4C5279001B96A7 /* LightPriceAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */,
+			);
+			path = LightPriceAppTests;
+			sourceTree = "<group>";
+		};
 		E38CFA51760552FB46E16B9F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -553,6 +583,24 @@
 			productReference = B586C29F2B3DCB63007F22FB /* LightPriceApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B5D335B32B4C5279001B96A7 /* LightPriceAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5D335BC2B4C5279001B96A7 /* Build configuration list for PBXNativeTarget "LightPriceAppTests" */;
+			buildPhases = (
+				B5D335B02B4C5279001B96A7 /* Sources */,
+				B5D335B12B4C5279001B96A7 /* Frameworks */,
+				B5D335B22B4C5279001B96A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5D335B92B4C5279001B96A7 /* PBXTargetDependency */,
+			);
+			name = LightPriceAppTests;
+			productName = LightPriceAppTests;
+			productReference = B5D335B42B4C5279001B96A7 /* LightPriceAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -565,6 +613,10 @@
 				TargetAttributes = {
 					B586C29E2B3DCB63007F22FB = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					B5D335B32B4C5279001B96A7 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = B586C29E2B3DCB63007F22FB;
 					};
 				};
 			};
@@ -583,6 +635,7 @@
 			projectRoot = "";
 			targets = (
 				B586C29E2B3DCB63007F22FB /* LightPriceApp */,
+				B5D335B32B4C5279001B96A7 /* LightPriceAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -608,6 +661,13 @@
 				B5168A122B3EC3B2007CD0D1 /* Roboto-Regular.ttf in Resources */,
 				B5168A092B3EC39B007CD0D1 /* Roboto-Black.ttf in Resources */,
 				B5168A0E2B3EC3A9007CD0D1 /* Roboto-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5D335B22B4C5279001B96A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,7 +741,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5D335B02B4C5279001B96A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D335B72B4C5279001B96A7 /* LightPriceAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5D335B92B4C5279001B96A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B586C29E2B3DCB63007F22FB /* LightPriceApp */;
+			targetProxy = B5D335B82B4C5279001B96A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B586C2AC2B3DCB64007F22FB /* Debug */ = {
@@ -878,6 +954,47 @@
 			};
 			name = Release;
 		};
+		B5D335BA2B4C5279001B96A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM99275N5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = light.price.LightPriceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightPriceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LightPriceApp";
+			};
+			name = Debug;
+		};
+		B5D335BB2B4C5279001B96A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM99275N5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = light.price.LightPriceAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LightPriceApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LightPriceApp";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -895,6 +1012,15 @@
 			buildConfigurations = (
 				B586C2AF2B3DCB64007F22FB /* Debug */,
 				B586C2B02B3DCB64007F22FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5D335BC2B4C5279001B96A7 /* Build configuration list for PBXNativeTarget "LightPriceAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5D335BA2B4C5279001B96A7 /* Debug */,
+				B5D335BB2B4C5279001B96A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
