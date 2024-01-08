@@ -59,6 +59,7 @@
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
 		B5D335B72B4C5279001B96A7 /* LightPriceAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */; };
+		B5D85EFA2B4C54810074711B /* LightPriceRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D85EF92B4C54810074711B /* LightPriceRepositoryTests.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -132,6 +133,7 @@
 		B5BB56102B40166900669F76 /* CalendarDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDropdown.swift; sourceTree = "<group>"; };
 		B5D335B42B4C5279001B96A7 /* LightPriceAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LightPriceAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceAppTests.swift; sourceTree = "<group>"; };
+		B5D85EF92B4C54810074711B /* LightPriceRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceRepositoryTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -549,9 +551,18 @@
 		B5D335B52B4C5279001B96A7 /* LightPriceAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				B5D85EF82B4C545E0074711B /* Data */,
 				B5D335B62B4C5279001B96A7 /* LightPriceAppTests.swift */,
 			);
 			path = LightPriceAppTests;
+			sourceTree = "<group>";
+		};
+		B5D85EF82B4C545E0074711B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B5D85EF92B4C54810074711B /* LightPriceRepositoryTests.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E38CFA51760552FB46E16B9F /* Frameworks */ = {
@@ -745,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D85EFA2B4C54810074711B /* LightPriceRepositoryTests.swift in Sources */,
 				B5D335B72B4C5279001B96A7 /* LightPriceAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
