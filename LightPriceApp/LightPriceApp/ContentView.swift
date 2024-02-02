@@ -12,6 +12,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             homeTab
+            statisticsTab
             settingsTab
         }
     }
@@ -20,6 +21,13 @@ struct ContentView: View {
         GeneralView()
             .tabItem {
                 Label("Home", systemImage: "house")
+            }
+    }
+
+    private var statisticsTab: some View {
+        StatisticsView()
+            .tabItem {
+                Label("Settings", systemImage: "chart.bar.xaxis")
             }
     }
 

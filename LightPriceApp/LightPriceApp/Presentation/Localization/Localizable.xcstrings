@@ -199,7 +199,14 @@
       }
     },
     "Settings" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
     },
     "settings.title" : {
       "extractionState" : "manual",
@@ -214,6 +221,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        }
+      }
+    },
+    "statistics.tab" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistics"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas"
           }
         }
       }
