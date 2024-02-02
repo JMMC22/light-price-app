@@ -30,16 +30,20 @@ struct StatisticsContainerView: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
-            title
+            header
             content
         }
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-
-    private var title: some View {
-        Text("statistics.tab")
-            .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+    
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("statistics.tab")
+                .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+            Text("statistics.description")
+                .LPFont(.Roboto(14, weight: .bold), color: .gray)
+        }
     }
 
     private var content: some View {

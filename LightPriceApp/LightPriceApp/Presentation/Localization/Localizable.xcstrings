@@ -225,6 +225,23 @@
         }
       }
     },
+    "statistics.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualize and analyze electricity prices by hours and months. Take control of your energy expenses with accurate real-time graphs."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visualiza y analiza los precios de la luz por horas y meses. Toma el control de tus gastos energéticos con gráficos precisos en tiempo real."
+          }
+        }
+      }
+    },
     "statistics.tab" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -275,6 +292,9 @@
           }
         }
       }
+    },
+    "WIP" : {
+
     },
     "worst.hour.price.date %@" : {
       "extractionState" : "manual",
