@@ -12,12 +12,16 @@ struct StatisticsView: View {
     @StateObject private var viewModel: StatisticsViewModel
 
     init() {
-        self._viewModel = StateObject(wrappedValue: StatisticsViewModel())
+        let lightPriceRepository = DefaultLightPriceRepository(httpClient: HTTPClient())
+        self._viewModel = StateObject(wrappedValue: StatisticsViewModel(lightPriceRespository: lightPriceRepository))
     }
 
     var body: some View {
         ScrollView {
             StatisticsContainerView(viewModel: viewModel)
+        }
+        .task {
+            await viewModel.viewDidLoad()
         }
     }
 }
