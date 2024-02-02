@@ -54,8 +54,10 @@ struct StatisticsContainerView: View {
     }
 
     private var content: some View {
-        VStack(spacing: 0) {
+        VStack(spacing: 24) {
             todayChart()
+            Divider()
+            bestRange()
         }
     }
 
@@ -84,6 +86,14 @@ struct StatisticsContainerView: View {
             }
             .chartXAxis(.hidden) // TODO: Date axis
             .chartYAxis(.hidden) // TODO: Prices axis
+        }
+    }
+
+    private func bestRange() -> some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("statistics.best.description")
+                .LPFont(.Roboto(14, weight: .bold), color: .gray)
+            HourRangeSliderView()
         }
     }
 }

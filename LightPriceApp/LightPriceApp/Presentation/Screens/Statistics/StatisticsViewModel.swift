@@ -52,6 +52,5 @@ extension StatisticsViewModel {
 extension StatisticsViewModel {
     func getBestHourRange() {
         let range = lightPriceRespository.findBestPriceRange(for: allPrices, withHours: 3, from: "17", to: "23")
-        print("||DEBUG|| getBestHourRange: - \(range)")
     }
 }

@@ -4,6 +4,16 @@
     "" : {
 
     },
+    "%lldh-%lldh" : {
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lldh-%2$lldh"
+          }
+        }
+      }
+    },
     "appearance" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -227,6 +237,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        }
+      }
+    },
+    "statistics.best.description" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose a time range to find the optimal moment to take advantage of electricity, maximizing your savings and minimizing costs."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selecciona un rango de horas para determinar el momento óptimo para aprovechar la electricidad, maximizando tus ahorros y minimizando los costos."
           }
         }
       }
