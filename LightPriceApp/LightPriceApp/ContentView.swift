@@ -27,7 +27,7 @@ struct ContentView: View {
     private var statisticsTab: some View {
         StatisticsView()
             .tabItem {
-                Label("Settings", systemImage: "chart.bar.xaxis")
+                Label("statistics.tab", systemImage: "chart.bar.xaxis")
             }
     }
 

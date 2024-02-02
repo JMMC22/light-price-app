@@ -9,7 +9,7 @@ import Foundation
 
 class StatisticsViewModel: ObservableObject {
 
-    private var allPrices: [LightPrice] = []
+    @Published var allPrices: [LightPrice] = []
 
     private let lightPriceRespository: LightPriceRepository
 

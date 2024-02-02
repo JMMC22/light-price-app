@@ -155,6 +155,9 @@
         }
       }
     },
+    "Date" : {
+
+    },
     "general.price.list.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -198,6 +201,9 @@
         }
       }
     },
+    "Price" : {
+
+    },
     "Settings" : {
       "localizations" : {
         "en" : {
@@ -238,6 +244,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visualiza y analiza los precios de la luz por horas y meses. Toma el control de tus gastos energéticos con gráficos precisos en tiempo real."
+          }
+        }
+      }
+    },
+    "statistics.progress.today" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's evolution"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evolución de hoy"
           }
         }
       }
@@ -292,9 +315,6 @@
           }
         }
       }
-    },
-    "WIP" : {
-
     },
     "worst.hour.price.date %@" : {
       "extractionState" : "manual",

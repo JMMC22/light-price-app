@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct StatisticsView: View {
 
@@ -26,7 +27,9 @@ struct StatisticsView: View {
     }
 }
 
-
+#Preview {
+    StatisticsView()
+}
 
 struct StatisticsContainerView: View {
 
@@ -52,7 +55,35 @@ struct StatisticsContainerView: View {
 
     private var content: some View {
         VStack(spacing: 0) {
-            Text("WIP")
+            todayChart()
+        }
+    }
+
+    private func todayChart() -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+
+            Text("statistics.progress.today")
+                .textCase(.uppercase)
+                .LPFont(.Roboto(10, weight: .blackItalic), color: .gray)
+
+            Divider()
+
+            Chart(viewModel.allPrices) { item in
+                LineMark(
+                    x: .value("Date", item.startHour),
+                    y: .value("Price", item.peninsulaPrice)
+                )
+                .foregroundStyle(Color.primaryColor)
+
+                AreaMark(
+                    x: .value("Date", item.startHour),
+                    y: .value("Price", item.peninsulaPrice)
+                )
+                .foregroundStyle(LinearGradient(colors: [.secondaryColor, .secondaryColor.opacity(0.2)],
+                                                startPoint: .top, endPoint: .bottom))
+            }
+            .chartXAxis(.hidden) // TODO: Date axis
+            .chartYAxis(.hidden) // TODO: Prices axis
         }
     }
 }
