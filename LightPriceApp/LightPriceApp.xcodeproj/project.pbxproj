@@ -41,6 +41,7 @@
 		B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB792B3F4067004297E3 /* PriceList.swift */; };
 		B54F57632B6CD3A6004192DE /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F57622B6CD3A6004192DE /* StatisticsView.swift */; };
 		B54F57652B6CD4F5004192DE /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F57642B6CD4F5004192DE /* StatisticsViewModel.swift */; };
+		B54F57682B6CF22D004192DE /* LightPriceBestRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F57672B6CF22D004192DE /* LightPriceBestRange.swift */; };
 		B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */; };
 		B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C742B3DFD9900A795D0 /* LightPrice.swift */; };
 		B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */; };
@@ -102,6 +103,7 @@
 		B530FB792B3F4067004297E3 /* PriceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceList.swift; sourceTree = "<group>"; };
 		B54F57622B6CD3A6004192DE /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		B54F57642B6CD4F5004192DE /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
+		B54F57672B6CF22D004192DE /* LightPriceBestRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceBestRange.swift; sourceTree = "<group>"; };
 		B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceEndpoints.swift; sourceTree = "<group>"; };
 		B5823C742B3DFD9900A795D0 /* LightPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPrice.swift; sourceTree = "<group>"; };
 		B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceDTO.swift; sourceTree = "<group>"; };
@@ -349,6 +351,14 @@
 			path = Statistics;
 			sourceTree = "<group>";
 		};
+		B54F57662B6CF21E004192DE /* LightPriceBestRange */ = {
+			isa = PBXGroup;
+			children = (
+				B54F57672B6CF22D004192DE /* LightPriceBestRange.swift */,
+			);
+			path = LightPriceBestRange;
+			sourceTree = "<group>";
+		};
 		B5823C6E2B3DFB5F00A795D0 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,6 +379,7 @@
 		B5823C722B3DFCC600A795D0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				B54F57662B6CF21E004192DE /* LightPriceBestRange */,
 				B5BB56092B400B0100669F76 /* LightPriceStatus */,
 				B5823C732B3DFD8300A795D0 /* LightPrice */,
 				B51689EC2B3EB6A4007CD0D1 /* LightPriceData */,
@@ -675,6 +686,7 @@
 				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
+				B54F57682B6CF22D004192DE /* LightPriceBestRange.swift in Sources */,
 				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */,

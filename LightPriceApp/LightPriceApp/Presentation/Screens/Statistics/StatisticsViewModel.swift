@@ -10,11 +10,13 @@ import Foundation
 class StatisticsViewModel: ObservableObject {
 
     @Published var allPrices: [LightPrice] = []
+    @Published var bestRange: LightPriceBestRange
 
     private let lightPriceRespository: LightPriceRepository
 
     init(lightPriceRespository: LightPriceRepository) {
         self.lightPriceRespository = lightPriceRespository
+        self.bestRange = LightPriceBestRange(startHour: "", endHour: "", averagePrice: 0)
     }
 
     func viewDidLoad() async {
@@ -36,10 +38,20 @@ extension StatisticsViewModel {
     }
 
     private func fetchDataDidSuccess(_ response: LightPriceData) {
-        self.allPrices = response.prices
+        DispatchQueue.main.async {
+            self.allPrices = response.prices
+            self.getBestHourRange()
+        }
     }
 
     private func fetchDataDidFail(_ error: RequestError) {
         print("||ERROR|| fetchData: \(error.customDescription)")
+    }
+}
+
+extension StatisticsViewModel {
+    func getBestHourRange() {
+        let range = lightPriceRespository.findBestPriceRange(for: allPrices, withHours: 3, from: "17", to: "23")
+        print("||DEBUG|| getBestHourRange: - \(range)")
     }
 }
