@@ -11,16 +11,21 @@ struct ContentView: View {
 
     var body: some View {
         TabView {
-            homeTab
-            statisticsTab
-            settingsTab
+            Group {
+                homeTab
+                statisticsTab
+                settingsTab
+            }
+            .toolbarBackground(Color.customWhite, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
         }
+        .tint(.primary)
     }
 
     private var homeTab: some View {
         GeneralView()
             .tabItem {
-                Label("Home", systemImage: "house")
+                Label("content.home", systemImage: "house")
             }
     }
 
@@ -34,7 +39,7 @@ struct ContentView: View {
     private var settingsTab: some View {
         SettingsView()
             .tabItem {
-                Label("Settings", systemImage: "gear")
+                Label("content.settings", systemImage: "gear")
             }
     }
 }
