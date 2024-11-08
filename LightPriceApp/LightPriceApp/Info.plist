@@ -17,5 +17,12 @@
 		<string>Roboto-Thin.ttf</string>
 		<string>Roboto-ThinItalic.ttf</string>
 	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string>CustomPrimary</string>
+		<key>UIImageName</key>
+		<string>lightning</string>
+	</dict>
 </dict>
 </plist>
