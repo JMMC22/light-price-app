@@ -18,7 +18,7 @@ struct ContentView: View {
             .toolbarBackground(Color.customWhite, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
         }
-        .tint(.primary)
+        .tint(.customBlack01)
     }
 
     private var homeTab: some View {
