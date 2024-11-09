@@ -81,10 +81,10 @@ struct StatisticsContainerView: View {
                     x: .value("Date", item.startHour),
                     y: .value("Price", item.peninsulaPrice)
                 )
-                .foregroundStyle(LinearGradient(colors: [.secondaryColor, .secondaryColor.opacity(0.2)],
+                .foregroundStyle(LinearGradient(colors: [.secondaryColor],
                                                 startPoint: .top, endPoint: .bottom))
             }
-            .chartXAxis(.hidden) // TODO: Date axis
+            .chartXAxis(.automatic) // TODO: Date axis
             .chartYAxis(.hidden) // TODO: Prices axis
         }
     }
