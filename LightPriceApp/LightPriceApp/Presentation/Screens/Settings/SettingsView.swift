@@ -68,7 +68,7 @@ struct NotificationsSettingsSectionView: View {
                         .LPFont(.Roboto(12, weight: .regular), color: .gray)
                 }
             }
-            .tint(.primary)
+            .tint(Color.primaryColor)
             .onChange(of: dailyNotificationIsOn) { value in
                 if value {
                     viewModel.requestLocalNotificationsPermissions()
@@ -94,7 +94,7 @@ struct AppearanceSettingsSectionView: View {
                         .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
                 }
             }
-            .tint(.primary)
+            .tint(Color.primaryColor)
             .onChange(of: darkModeIsOn) { value in
                 viewModel.configureDarkMode(value)
                 darkModeIsOn = value
