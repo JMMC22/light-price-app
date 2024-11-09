@@ -12,6 +12,12 @@ class StatisticsViewModel: ObservableObject {
     @Published var allPrices: [LightPrice] = []
     @Published var bestRange: LightPriceBestRange
 
+    @Published var range: (Int, Int) = (0, 24) {
+        didSet {
+            getBestHourRange()
+        }
+    }
+
     private let lightPriceRespository: LightPriceRepository
 
     init(lightPriceRespository: LightPriceRepository) {
@@ -51,6 +57,10 @@ extension StatisticsViewModel {
 
 extension StatisticsViewModel {
     func getBestHourRange() {
-        let range = lightPriceRespository.findBestPriceRange(for: allPrices, withHours: 3, from: "17", to: "23")
+        let startHour = String(format: "%02d", range.0)
+        let endHour = String(format: "%02d", range.1)
+
+        let range = lightPriceRespository.findBestPriceRange(for: allPrices, withHours: 3, from: startHour, to: endHour)
+        self.bestRange = range
     }
 }

@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HourRangeSliderView: View {
-    
+
+    @Binding var range: (Int, Int)
+
     @State var width: CGFloat = 0
     @State var widthTow: CGFloat = 50
     @State var isDragginfLeft = false
@@ -18,20 +20,13 @@ struct HourRangeSliderView: View {
     private let barHeight: CGFloat = 20
     private let offsetValue: CGFloat = 40
 
-    private var lowerValue: Int {
-        return Int(map(value: width, from: 0...totalScreen, to: 0...24))
-    }
-
-    private var higherValue: Int {
-        return Int(map(value: widthTow, from: 0...totalScreen, to: 0...24))
-    }
-
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
                 title()
                 slider()
             }
+            .frame(maxHeight: geometry.size.height)
             .onAppear {
                 totalScreen = geometry.size.width - offsetValue
                 widthTow = totalScreen
@@ -40,17 +35,17 @@ struct HourRangeSliderView: View {
     }
 
     private func title() -> some View {
-        Text("\(lowerValue)h-\(higherValue)h")
+        Text("\(range.0)h-\(range.1)h")
             .LPFont(.Roboto(18, weight: .blackItalic), color: .customBlack)
     }
 
     private func slider() -> some View {
         ZStack(alignment: .leading) {
-
+            
             RoundedRectangle(cornerRadius: 10)
                 .foregroundStyle(.customSecondary)
                 .frame(height: barHeight)
-
+            
             Rectangle()
                 .fill(.customPrimary)
                 .frame(width: widthTow - width, height: barHeight)
@@ -63,8 +58,14 @@ struct HourRangeSliderView: View {
                                 otherPosition: $width, limit: totalScreen)
             }
             
-//            ValueBox(isDragging: isDragginfLeft, value: lowerValue, position: width, xOffset: -18)
-//            ValueBox(isDragging: isDragginfRight, value: higherValue, position: widthTow, xOffset: 0)
+            //            ValueBox(isDragging: isDragginfLeft, value: lowerValue, position: width, xOffset: -18)
+            //            ValueBox(isDragging: isDragginfRight, value: higherValue, position: widthTow, xOffset: 0)
+        }
+        .onChange(of: width) { value in
+            range.0 = Int(map(value: value, from: 0...totalScreen, to: 0...24))
+        }
+        .onChange(of: widthTow) { value in
+            range.1 = Int(map(value: widthTow, from: 0...totalScreen, to: 0...24))
         }
     }
 
@@ -74,11 +75,6 @@ struct HourRangeSliderView: View {
         let outputRange = to.upperBound - to.lowerBound
         return (value - from.lowerBound) / inputRange * outputRange + to.lowerBound
     }
-}
-
-#Preview {
-    HourRangeSliderView()
-        .padding(16)
 }
 
 struct DraggableCircle: View {

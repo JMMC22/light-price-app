@@ -219,9 +219,6 @@
         }
       }
     },
-    "Home" : {
-
-    },
     "Key" : {
       "extractionState" : "manual"
     },
@@ -249,6 +246,7 @@
 
     },
     "Settings" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

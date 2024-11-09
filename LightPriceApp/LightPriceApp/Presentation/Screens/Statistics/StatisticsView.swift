@@ -90,10 +90,15 @@ struct StatisticsContainerView: View {
     }
 
     private func bestRange() -> some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .center, spacing: 32) {
             Text("statistics.best.description")
                 .LPFont(.Roboto(14, weight: .bold), color: .gray)
-            HourRangeSliderView()
+                .frame(maxWidth: .infinity, alignment: .leading)
+
+            HourRangeSliderView(range: $viewModel.range)
+
+            Text(viewModel.bestRange.startHour + "-" + viewModel.bestRange.endHour + "h")
+                .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
         }
     }
 }
