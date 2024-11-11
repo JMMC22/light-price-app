@@ -42,6 +42,12 @@
 		B530FB732B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */; };
 		B530FB782B3F3F60004297E3 /* PriceItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB772B3F3F60004297E3 /* PriceItemList.swift */; };
 		B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB792B3F4067004297E3 /* PriceList.swift */; };
+		B55EA2A12CE23DC200CA6411 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55EA2A02CE23DC200CA6411 /* WidgetKit.framework */; };
+		B55EA2A32CE23DC200CA6411 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B55EA2A22CE23DC200CA6411 /* SwiftUI.framework */; };
+		B55EA2AE2CE23DC500CA6411 /* LightPriceWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = B55EA29F2CE23DC200CA6411 /* LightPriceWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B55EA2C12CE23E9A00CA6411 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55EA2BC2CE23E9A00CA6411 /* Assets.xcassets */; };
+		B55EA2C32CE23E9A00CA6411 /* LightPriceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55EA2BE2CE23E9A00CA6411 /* LightPriceWidget.swift */; };
+		B55EA2C42CE23E9A00CA6411 /* LightPriceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55EA2BF2CE23E9A00CA6411 /* LightPriceWidgetBundle.swift */; };
 		B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */; };
 		B5823C752B3DFD9900A795D0 /* LightPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C742B3DFD9900A795D0 /* LightPrice.swift */; };
 		B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */; };
@@ -63,6 +69,30 @@
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
 		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B55EA2AC2CE23DC500CA6411 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B586C2972B3DCB63007F22FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55EA29E2CE23DC200CA6411;
+			remoteInfo = LightPriceWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B55EA2AF2CE23DC500CA6411 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B55EA2AE2CE23DC500CA6411 /* LightPriceWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +134,13 @@
 		B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressPanelViewModel.swift; sourceTree = "<group>"; };
 		B530FB772B3F3F60004297E3 /* PriceItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItemList.swift; sourceTree = "<group>"; };
 		B530FB792B3F4067004297E3 /* PriceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceList.swift; sourceTree = "<group>"; };
+		B55EA29F2CE23DC200CA6411 /* LightPriceWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LightPriceWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55EA2A02CE23DC200CA6411 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		B55EA2A22CE23DC200CA6411 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		B55EA2BC2CE23E9A00CA6411 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B55EA2BD2CE23E9A00CA6411 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55EA2BE2CE23E9A00CA6411 /* LightPriceWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceWidget.swift; sourceTree = "<group>"; };
+		B55EA2BF2CE23E9A00CA6411 /* LightPriceWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceWidgetBundle.swift; sourceTree = "<group>"; };
 		B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceEndpoints.swift; sourceTree = "<group>"; };
 		B5823C742B3DFD9900A795D0 /* LightPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPrice.swift; sourceTree = "<group>"; };
 		B5823C772B3DFDAE00A795D0 /* LightPriceDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceDTO.swift; sourceTree = "<group>"; };
@@ -128,6 +165,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B55EA29C2CE23DC200CA6411 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55EA2A32CE23DC200CA6411 /* SwiftUI.framework in Frameworks */,
+				B55EA2A12CE23DC200CA6411 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B586C29C2B3DCB63007F22FB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -360,6 +406,17 @@
 			path = ItemList;
 			sourceTree = "<group>";
 		};
+		B55EA2C02CE23E9A00CA6411 /* LightPriceWidget */ = {
+			isa = PBXGroup;
+			children = (
+				B55EA2BC2CE23E9A00CA6411 /* Assets.xcassets */,
+				B55EA2BD2CE23E9A00CA6411 /* Info.plist */,
+				B55EA2BE2CE23E9A00CA6411 /* LightPriceWidget.swift */,
+				B55EA2BF2CE23E9A00CA6411 /* LightPriceWidgetBundle.swift */,
+			);
+			path = LightPriceWidget;
+			sourceTree = "<group>";
+		};
 		B5823C6E2B3DFB5F00A795D0 /* Endpoints */ = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +507,7 @@
 			isa = PBXGroup;
 			children = (
 				B586C2A12B3DCB63007F22FB /* LightPriceApp */,
+				B55EA2C02CE23E9A00CA6411 /* LightPriceWidget */,
 				B586C2A02B3DCB63007F22FB /* Products */,
 				1DB56DF3BED2DC0A5AF3B60B /* Pods */,
 				E38CFA51760552FB46E16B9F /* Frameworks */,
@@ -460,6 +518,7 @@
 			isa = PBXGroup;
 			children = (
 				B586C29F2B3DCB63007F22FB /* LightPriceApp.app */,
+				B55EA29F2CE23DC200CA6411 /* LightPriceWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -553,6 +612,8 @@
 			isa = PBXGroup;
 			children = (
 				B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */,
+				B55EA2A02CE23DC200CA6411 /* WidgetKit.framework */,
+				B55EA2A22CE23DC200CA6411 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -560,6 +621,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B55EA29E2CE23DC200CA6411 /* LightPriceWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55EA2B32CE23DC500CA6411 /* Build configuration list for PBXNativeTarget "LightPriceWidgetExtension" */;
+			buildPhases = (
+				B55EA29B2CE23DC200CA6411 /* Sources */,
+				B55EA29C2CE23DC200CA6411 /* Frameworks */,
+				B55EA29D2CE23DC200CA6411 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LightPriceWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = LightPriceWidgetExtension;
+			productReference = B55EA29F2CE23DC200CA6411 /* LightPriceWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		B586C29E2B3DCB63007F22FB /* LightPriceApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "LightPriceApp" */;
@@ -568,10 +648,12 @@
 				B586C29B2B3DCB63007F22FB /* Sources */,
 				B586C29C2B3DCB63007F22FB /* Frameworks */,
 				B586C29D2B3DCB63007F22FB /* Resources */,
+				B55EA2AF2CE23DC500CA6411 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B55EA2AD2CE23DC500CA6411 /* PBXTargetDependency */,
 			);
 			name = LightPriceApp;
 			productName = LightPriceApp;
@@ -585,9 +667,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1500;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					B55EA29E2CE23DC200CA6411 = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					B586C29E2B3DCB63007F22FB = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -608,11 +693,20 @@
 			projectRoot = "";
 			targets = (
 				B586C29E2B3DCB63007F22FB /* LightPriceApp */,
+				B55EA29E2CE23DC200CA6411 /* LightPriceWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B55EA29D2CE23DC200CA6411 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55EA2C12CE23E9A00CA6411 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B586C29D2B3DCB63007F22FB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -664,6 +758,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B55EA29B2CE23DC200CA6411 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55EA2C32CE23E9A00CA6411 /* LightPriceWidget.swift in Sources */,
+				B55EA2C42CE23E9A00CA6411 /* LightPriceWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B586C29B2B3DCB63007F22FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,7 +814,74 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		B55EA2AD2CE23DC500CA6411 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55EA29E2CE23DC200CA6411 /* LightPriceWidgetExtension */;
+			targetProxy = B55EA2AC2CE23DC500CA6411 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		B55EA2B02CE23DC500CA6411 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM99275N5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LightPriceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LightPriceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightprice.app.LightPriceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B55EA2B12CE23DC500CA6411 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM99275N5A;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LightPriceWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LightPriceWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lightprice.app.LightPriceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		B586C2AC2B3DCB64007F22FB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -911,6 +1081,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B55EA2B32CE23DC500CA6411 /* Build configuration list for PBXNativeTarget "LightPriceWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55EA2B02CE23DC500CA6411 /* Debug */,
+				B55EA2B12CE23DC500CA6411 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B586C29A2B3DCB63007F22FB /* Build configuration list for PBXProject "LightPriceApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
