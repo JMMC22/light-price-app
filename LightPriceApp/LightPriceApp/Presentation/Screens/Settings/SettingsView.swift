@@ -16,9 +16,7 @@ struct SettingsView: View {
     }
 
     var body: some View {
-        ScrollView {
-            SettingsContainerView(viewModel: viewModel)
-        }
+        SettingsContainerView(viewModel: viewModel)
     }
 }
 
@@ -48,6 +46,8 @@ struct SettingsContainerView: View {
         VStack(spacing: 24) {
             NotificationsSettingsSectionView(viewModel: viewModel)
             AppearanceSettingsSectionView(viewModel: viewModel)
+            Spacer()
+            AppInformationSectionView()
         }
     }
 }
@@ -100,5 +100,13 @@ struct AppearanceSettingsSectionView: View {
                 darkModeIsOn = value
             }
         }
+    }
+}
+
+struct AppInformationSectionView: View {
+    var body: some View {
+        Text("v" + Bundle.getAppVersion() + " (\(Bundle.getBuildNumber()))")
+            .LPFont(.Roboto(12, weight: .regular), color: .gray)
+            .frame(maxWidth: .infinity, alignment: .trailing)
     }
 }
