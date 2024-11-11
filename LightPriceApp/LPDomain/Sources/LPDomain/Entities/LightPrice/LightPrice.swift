@@ -6,25 +6,26 @@
 //
 
 import Foundation
+import LPUtils
 
-struct LightPrice: Identifiable {
-    let id = UUID()
-    let date: String
-    let startHour: String
-    let endHour: String
-    let hourRange: String
-    let peninsulaPrice: Double
-    let ceutaMelillaPrice: Double
+public struct LightPrice: Identifiable {
+    public let id = UUID()
+    public let date: String
+    public let startHour: String
+    public let endHour: String
+    public let hourRange: String
+    public let peninsulaPrice: Double
+    public let ceutaMelillaPrice: Double
 }
 
-extension LightPrice {
+public extension LightPrice {
     var fullDate: String {
         guard let date = DateFormatter.yearMonthDayFormatter.date(from: date) else { return date }
         return DateFormatter.fullDateFormatter.string(from: date)
     }
 }
 
-extension LightPrice {
+public extension LightPrice {
     func getStatus(maxPrice: Double, minPrice: Double) -> LightPriceStatus {
         let range = (maxPrice - minPrice) / 3
 

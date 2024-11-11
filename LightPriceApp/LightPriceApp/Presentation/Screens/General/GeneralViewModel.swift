@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LPDomain
 
 @MainActor
 class GeneralViewModel: ObservableObject {
@@ -50,7 +51,7 @@ extension GeneralViewModel {
         isLoading = false
     }
 
-    private func fetchDataDidFail(_ error: RequestError) {
+    private func fetchDataDidFail(_ error: LightPriceError) {
         self.error = true
     }
 }

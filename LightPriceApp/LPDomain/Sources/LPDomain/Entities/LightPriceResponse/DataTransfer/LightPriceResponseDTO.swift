@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LightPriceResponseDTO: Decodable {
+public struct LightPriceResponseDTO: Decodable {
     let voluntaryPrices: [LightPriceDTO]?
 
     enum CodingKeys: String, CodingKey {
@@ -15,7 +15,7 @@ struct LightPriceResponseDTO: Decodable {
     }
 }
 
-extension LightPriceResponseDTO {
+public extension LightPriceResponseDTO {
     func toDomain() -> LightPriceResponse {
         LightPriceResponse(prices: voluntaryPrices?.compactMap({ $0.toDomain()}) ?? [])
     }

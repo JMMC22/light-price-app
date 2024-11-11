@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import LPDomain
 
 final class DefaultLightPriceRepository {
 
@@ -18,7 +19,7 @@ final class DefaultLightPriceRepository {
 
 extension DefaultLightPriceRepository: LightPriceRepository {
 
-    func getData(date: String) async -> Result<LightPriceData, RequestError> {
+    func getData(date: String) async -> Result<LightPriceData, LightPriceError> {
         let endpoint = LightPriceEndpoints.data(date: date)
         let result = await httpClient.request(endpoint: endpoint, responseModel: LightPriceResponseDTO.self)
 
@@ -27,7 +28,7 @@ extension DefaultLightPriceRepository: LightPriceRepository {
             let data = LightPriceData(response.toDomain(), date: date)
             return .success(data)
         case .failure(let error):
-            return .failure(error)
+            return .failure(.generic)
         }
     }
 }

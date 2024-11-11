@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LightPriceStatus {
+public enum LightPriceStatus {
     case low
     case medium
     case high

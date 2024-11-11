@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LPDesignSystem
+import LPDomain
 
 struct PriceItemList: View {
 

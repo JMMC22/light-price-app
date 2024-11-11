@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct LightPriceResponse {
+public struct LightPriceResponse {
     let prices: [LightPrice]
 }
 
-extension LightPriceResponse {
+public extension LightPriceResponse {
 
     var currentPrice: LightPrice? {
         let currentHour = String(format: "%02d", Calendar.current.component(.hour, from: Date()))

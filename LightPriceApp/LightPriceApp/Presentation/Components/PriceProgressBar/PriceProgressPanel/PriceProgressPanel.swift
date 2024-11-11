@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LPDesignSystem
+import LPUtils
 
 struct PriceProgressPanel: View {
     

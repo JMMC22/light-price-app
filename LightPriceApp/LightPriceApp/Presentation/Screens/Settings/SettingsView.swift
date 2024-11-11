@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LPUtils
 
 struct SettingsView: View {
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension DateFormatter {
+public extension DateFormatter {
 
     static let fullDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
