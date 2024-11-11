@@ -37,6 +37,8 @@
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
 		B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */; };
 		B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */; };
+		B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */; };
+		B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */; };
 		B530FB732B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */; };
 		B530FB782B3F3F60004297E3 /* PriceItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB772B3F3F60004297E3 /* PriceItemList.swift */; };
 		B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB792B3F4067004297E3 /* PriceList.swift */; };
@@ -97,6 +99,8 @@
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
+		B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getAppVersion.swift"; sourceTree = "<group>"; };
+		B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getBuildNumber.swift"; sourceTree = "<group>"; };
 		B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressPanelViewModel.swift; sourceTree = "<group>"; };
 		B530FB772B3F3F60004297E3 /* PriceItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItemList.swift; sourceTree = "<group>"; };
 		B530FB792B3F4067004297E3 /* PriceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceList.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		B5168A1C2B3ED3F1007CD0D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B53039522CE1F56200A142BD /* Bundle */,
 				B5BB560E2B40113700669F76 /* Date */,
 			);
 			path = Extensions;
@@ -319,6 +324,15 @@
 				B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		B53039522CE1F56200A142BD /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */,
+				B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */,
+			);
+			path = Bundle;
 			sourceTree = "<group>";
 		};
 		B530FB742B3F3F3A004297E3 /* PriceList */ = {
@@ -657,6 +671,7 @@
 				B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
+				B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */,
 				B59C85312B432BE300D00CEB /* SettingsSection.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
 				B5168A2B2B3EF303007CD0D1 /* GeneralView.swift in Sources */,
@@ -669,6 +684,7 @@
 				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
 				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
+				B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
