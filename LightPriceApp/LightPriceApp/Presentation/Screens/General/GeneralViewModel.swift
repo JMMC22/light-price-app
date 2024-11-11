@@ -16,6 +16,7 @@ class GeneralViewModel: ObservableObject {
     @Published var allPrices: [LightPrice] = []
     @Published var selectedDate: Date = Date()
     @Published var isLoading: Bool = false
+    @Published var error: Bool = false
 
     private let lightPriceRespository: LightPriceRepository
 
@@ -50,6 +51,6 @@ extension GeneralViewModel {
     }
 
     private func fetchDataDidFail(_ error: RequestError) {
-        print("||ERROR|| fetchData: \(error.customDescription)")
+        self.error = true
     }
 }

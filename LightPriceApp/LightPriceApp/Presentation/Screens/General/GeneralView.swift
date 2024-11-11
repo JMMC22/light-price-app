@@ -20,9 +20,16 @@ struct GeneralView: View {
         ScrollView {
             GeneralViewContainer(viewModel: viewModel)
         }
+        .overlay(error(), alignment: .bottom)
         .task {
             await viewModel.viewDidLoad()
         }
+    }
+
+    private func error() -> some View {
+        ErrorAlertView()
+            .padding(16)
+            .opacity(viewModel.error ? 1 : 0)
     }
 }
 
