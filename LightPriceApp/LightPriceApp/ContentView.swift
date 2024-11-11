@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LPDesignSystem
 
 struct ContentView: View {
 
@@ -18,7 +19,7 @@ struct ContentView: View {
             .toolbarBackground(Color.customWhite, for: .tabBar)
             .toolbarBackground(.visible, for: .tabBar)
         }
-        .tint(.customBlack01)
+        .tint(Color.customBlack)
     }
 
     private var homeTab: some View {

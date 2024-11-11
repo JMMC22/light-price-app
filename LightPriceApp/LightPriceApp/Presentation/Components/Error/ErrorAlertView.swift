@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LPDesignSystem
 
 struct ErrorAlertView: View {
 
@@ -17,7 +18,7 @@ struct ErrorAlertView: View {
         .LPFont(.Roboto(14, weight: .semiBold), color: .white)
         .padding(8)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 4).fill(.customRed01))
+        .background(RoundedRectangle(cornerRadius: 4).fill(Color.customRed))
     }
 }
 

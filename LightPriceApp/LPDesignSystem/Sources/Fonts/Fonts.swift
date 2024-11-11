@@ -17,7 +17,7 @@ enum FontType: String {
     }
 }
 
-enum FontWeight: String {
+public enum FontWeight: String {
     case extraLight
     case light
     case thin

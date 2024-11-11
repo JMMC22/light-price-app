@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LPDesignSystem
 
 struct SettingsSection<Content: View>: View {
 
@@ -24,7 +25,7 @@ struct SettingsSection<Content: View>: View {
 }
 
 #Preview {
-                SettingsSection(title: "Notificaciones") {
-                    Text("Content")
-                }
+    SettingsSection(title: "Notificaciones") {
+        Text("Content")
+    }
 }

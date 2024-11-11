@@ -9,12 +9,21 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct LPFont {
+public struct LPFont {
     var font: UIFont
 
-    static func Roboto(_ size: CGFloat, weight: FontWeight) -> LPFont {
+    public static func Roboto(_ size: CGFloat, weight: FontWeight) -> LPFont {
         let font = UIFont.font(type: .roboto, weight: weight, size: size)
         return LPFont(font: font)
+    }
+
+    public static func registerAllFonts() {
+        guard let fontURLs = Bundle.module.urls(forResourcesWithExtension: "ttf", subdirectory: nil) else { return
+        }
+
+        for fontURL in fontURLs {
+            CTFontManagerRegisterFontsForURL(fontURL as CFURL, .process, nil)
+        }
     }
 }
 
@@ -30,7 +39,7 @@ struct LPFontModifier: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     func LPFont(_ font: LPFont, color: Color) -> some View {
         modifier(LPFontModifier(font: font, color: color))
     }
