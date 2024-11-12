@@ -29,6 +29,7 @@
 		B55EA2C32CE23E9A00CA6411 /* LightPriceWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55EA2BE2CE23E9A00CA6411 /* LightPriceWidget.swift */; };
 		B55EA2C42CE23E9A00CA6411 /* LightPriceWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55EA2BF2CE23E9A00CA6411 /* LightPriceWidgetBundle.swift */; };
 		B55EA2D02CE2524900CA6411 /* LPDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B55EA2CF2CE2524900CA6411 /* LPDesignSystem */; };
+		B581440B2CE3E44700D9D3A4 /* LPDesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B581440A2CE3E44700D9D3A4 /* LPDesignSystem */; };
 		B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */; };
 		B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */; };
 		B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */; };
@@ -123,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55EA2A32CE23DC200CA6411 /* SwiftUI.framework in Frameworks */,
+				B581440B2CE3E44700D9D3A4 /* LPDesignSystem in Frameworks */,
 				B55EA2A12CE23DC200CA6411 /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,6 +433,7 @@
 			);
 			name = LightPriceWidgetExtension;
 			packageProductDependencies = (
+				B581440A2CE3E44700D9D3A4 /* LPDesignSystem */,
 			);
 			productName = LightPriceWidgetExtension;
 			productReference = B55EA29F2CE23DC200CA6411 /* LightPriceWidgetExtension.appex */;
@@ -882,6 +885,10 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		B55EA2CF2CE2524900CA6411 /* LPDesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LPDesignSystem;
+		};
+		B581440A2CE3E44700D9D3A4 /* LPDesignSystem */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LPDesignSystem;
 		};

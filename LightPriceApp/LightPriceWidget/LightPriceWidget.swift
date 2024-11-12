@@ -7,14 +7,16 @@
 
 import WidgetKit
 import SwiftUI
+import LPDesignSystem
 
 struct Provider: TimelineProvider {
+
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+        SimpleEntry(date: Date(), rangeHour: "14-15", value: 0.061)
     }
 
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+        let entry = SimpleEntry(date: Date(), rangeHour: "14-15", value: 0.061)
         completion(entry)
     }
 
@@ -25,7 +27,7 @@ struct Provider: TimelineProvider {
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
+            let entry = SimpleEntry(date: entryDate, rangeHour: "14-15", value: 0.061)
             entries.append(entry)
         }
 
@@ -40,24 +42,31 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let rangeHour: String
+    let value: Double
 }
 
 struct LightPriceWidgetEntryView : View {
+
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
+        VStack(spacing: 8) {
+            Text("Best time today")
+                .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
 
-            Text("Emoji:")
-            Text(entry.emoji)
+            VStack(spacing: 4) {
+                Text("\(entry.rangeHour)h")
+                    .LPFont(.Roboto(36, weight: .blackItalic), color: .customBlack)
+                Text(String(entry.value) + " €/kWh")
+                    .LPFont(.Roboto(12, weight: .bold), color: .customGreen)
+            }
         }
     }
 }
 
 struct LightPriceWidget: Widget {
+
     let kind: String = "LightPriceWidget"
 
     var body: some WidgetConfiguration {
@@ -79,6 +88,6 @@ struct LightPriceWidget: Widget {
 #Preview(as: .systemSmall) {
     LightPriceWidget()
 } timeline: {
-    SimpleEntry(date: .now, emoji: "😀")
-    SimpleEntry(date: .now, emoji: "🤩")
+    SimpleEntry(date: .now, rangeHour: "14-15", value: 0.50)
+    SimpleEntry(date: .now, rangeHour: "00-01", value: 0.156)
 }

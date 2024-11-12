@@ -7,9 +7,15 @@
 
 import WidgetKit
 import SwiftUI
+import LPDesignSystem
 
 @main
 struct LightPriceWidgetBundle: WidgetBundle {
+
+    init() {
+        LPFont.registerAllFonts()
+    }
+
     var body: some Widget {
         LightPriceWidget()
     }
