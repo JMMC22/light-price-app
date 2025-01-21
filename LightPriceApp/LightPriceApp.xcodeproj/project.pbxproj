@@ -36,6 +36,9 @@
 		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
 		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
 		B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */; };
+		B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */; };
+		B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */; };
+		B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */; };
 		B530FB732B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */; };
 		B530FB782B3F3F60004297E3 /* PriceItemList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB772B3F3F60004297E3 /* PriceItemList.swift */; };
 		B530FB7A2B3F4067004297E3 /* PriceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B530FB792B3F4067004297E3 /* PriceList.swift */; };
@@ -99,6 +102,9 @@
 		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
+		B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
+		B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getAppVersion.swift"; sourceTree = "<group>"; };
+		B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getBuildNumber.swift"; sourceTree = "<group>"; };
 		B530FB722B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceProgressPanelViewModel.swift; sourceTree = "<group>"; };
 		B530FB772B3F3F60004297E3 /* PriceItemList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItemList.swift; sourceTree = "<group>"; };
 		B530FB792B3F4067004297E3 /* PriceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceList.swift; sourceTree = "<group>"; };
@@ -113,7 +119,7 @@
 		B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightPriceRepository.swift; sourceTree = "<group>"; };
 		B5823C822B3E04D000A795D0 /* LightPriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponse.swift; sourceTree = "<group>"; };
 		B5823C852B3E04E200A795D0 /* LightPriceResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponseDTO.swift; sourceTree = "<group>"; };
-		B586C29F2B3DCB63007F22FB /* LightPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B586C29F2B3DCB63007F22FB /* iLuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceApp.swift; sourceTree = "<group>"; };
 		B586C2A42B3DCB63007F22FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B586C2A62B3DCB64007F22FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				B5BB560F2B40163D00669F76 /* Dropdown */,
+				B530394F2CE1EC1500A142BD /* Error */,
 				B530FB742B3F3F3A004297E3 /* PriceList */,
 				B5168A1A2B3ECA75007CD0D1 /* PricePanel */,
 				B5168A1F2B3EDD19007CD0D1 /* PriceProgressBar */,
@@ -248,6 +255,7 @@
 		B5168A1C2B3ED3F1007CD0D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B53039522CE1F56200A142BD /* Bundle */,
 				B5BB560E2B40113700669F76 /* Date */,
 			);
 			path = Extensions;
@@ -317,6 +325,23 @@
 				B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		B530394F2CE1EC1500A142BD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		B53039522CE1F56200A142BD /* Bundle */ = {
+			isa = PBXGroup;
+			children = (
+				B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */,
+				B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */,
+			);
+			path = Bundle;
 			sourceTree = "<group>";
 		};
 		B530FB742B3F3F3A004297E3 /* PriceList */ = {
@@ -470,7 +495,7 @@
 		B586C2A02B3DCB63007F22FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B586C29F2B3DCB63007F22FB /* LightPriceApp.app */,
+				B586C29F2B3DCB63007F22FB /* iLuz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -571,9 +596,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B586C29E2B3DCB63007F22FB /* LightPriceApp */ = {
+		B586C29E2B3DCB63007F22FB /* iLuz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "LightPriceApp" */;
+			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "iLuz" */;
 			buildPhases = (
 				1EE62E9B093F10E84C519552 /* [CP] Check Pods Manifest.lock */,
 				B586C29B2B3DCB63007F22FB /* Sources */,
@@ -584,9 +609,9 @@
 			);
 			dependencies = (
 			);
-			name = LightPriceApp;
+			name = iLuz;
 			productName = LightPriceApp;
-			productReference = B586C29F2B3DCB63007F22FB /* LightPriceApp.app */;
+			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -618,7 +643,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B586C29E2B3DCB63007F22FB /* LightPriceApp */,
+				B586C29E2B3DCB63007F22FB /* iLuz */,
 			);
 		};
 /* End PBXProject section */
@@ -682,6 +707,7 @@
 				B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
+				B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */,
 				B59C85312B432BE300D00CEB /* SettingsSection.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
 				B5168A2B2B3EF303007CD0D1 /* GeneralView.swift in Sources */,
@@ -697,12 +723,14 @@
 				B54F576B2B6CF819004192DE /* HourRangeSliderView.swift in Sources */,
 				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
 				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
+				B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B54F57682B6CF22D004192DE /* LightPriceBestRange.swift in Sources */,
 				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
 				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
+				B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */,
 				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
@@ -932,7 +960,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "LightPriceApp" */ = {
+		B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "iLuz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B586C2AF2B3DCB64007F22FB /* Debug */,

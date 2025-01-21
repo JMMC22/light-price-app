@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class GeneralViewModel: ObservableObject {
 
     @Published var currentPrice: LightPrice?
@@ -14,6 +15,8 @@ class GeneralViewModel: ObservableObject {
     @Published var minPrice: LightPrice?
     @Published var allPrices: [LightPrice] = []
     @Published var selectedDate: Date = Date()
+    @Published var isLoading: Bool = false
+    @Published var error: Bool = false
 
     private let lightPriceRespository: LightPriceRepository
 
@@ -22,6 +25,7 @@ class GeneralViewModel: ObservableObject {
     }
 
     func viewDidLoad() async {
+        isLoading = true
         await fetchData()
     }
 }
@@ -39,15 +43,14 @@ extension GeneralViewModel {
     }
 
     private func fetchDataDidSuccess(_ response: LightPriceData) {
-        DispatchQueue.main.async {
-            self.currentPrice = response.currentPrice
-            self.maxPrice = response.maxPrice
-            self.minPrice = response.minPrice
-            self.allPrices = response.prices
-        }
+        currentPrice = response.currentPrice
+        maxPrice = response.maxPrice
+        minPrice = response.minPrice
+        allPrices = response.prices
+        isLoading = false
     }
 
     private func fetchDataDidFail(_ error: RequestError) {
-        print("||ERROR|| fetchData: \(error.customDescription)")
+        self.error = true
     }
 }

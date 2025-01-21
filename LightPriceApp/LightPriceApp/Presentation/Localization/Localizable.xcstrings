@@ -65,6 +65,9 @@
         }
       }
     },
+    "Content" : {
+
+    },
     "content.home" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -219,11 +222,22 @@
         }
       }
     },
-    "Key" : {
-      "extractionState" : "manual"
-    },
-    "Key 1" : {
-      "extractionState" : "manual"
+    "generic.error" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oops, an error seems to have occurred. Please try again later."
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Vaya! Parece que ha ocurrido un error. Inténtelo de nuevo más tarde."
+          }
+        }
+      }
     },
     "notifications" : {
       "extractionState" : "manual",

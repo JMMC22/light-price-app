@@ -20,9 +20,16 @@ struct GeneralView: View {
         ScrollView {
             GeneralViewContainer(viewModel: viewModel)
         }
+        .overlay(error(), alignment: .bottom)
         .task {
             await viewModel.viewDidLoad()
         }
+    }
+
+    private func error() -> some View {
+        ErrorAlertView()
+            .padding(16)
+            .opacity(viewModel.error ? 1 : 0)
     }
 }
 
@@ -70,20 +77,23 @@ struct GeneralViewContainer: View {
         PriceProgressPanel(currentPrice: viewModel.currentPrice?.peninsulaPrice ?? 0.0,
                            minPrice: viewModel.minPrice?.peninsulaPrice ?? 0.0,
                            maxPrice: viewModel.maxPrice?.peninsulaPrice ?? 0.0)
+        .redacted(reason: viewModel.isLoading ? .placeholder : [])
     }
 
     private var cheaperPricePanel: some View {
         PricePanel(date: viewModel.selectedDate,
-                   rangeHour: viewModel.minPrice?.hourRange ?? "",
+                   rangeHour: viewModel.minPrice?.hourRange ?? "00-24",
                    price: viewModel.minPrice?.peninsulaPrice ?? 0.0,
                    type: .minPrice)
+        .redacted(reason: viewModel.isLoading ? .placeholder : [])
     }
 
     private var moreExpensivePricePanel: some View {
         PricePanel(date: viewModel.selectedDate,
-                   rangeHour: viewModel.maxPrice?.hourRange ?? "",
+                   rangeHour: viewModel.maxPrice?.hourRange ?? "00-24",
                    price: viewModel.maxPrice?.peninsulaPrice ?? 0.0,
                    type: .maxPrice)
+        .redacted(reason: viewModel.isLoading ? .placeholder : [])
     }
     
     private var priceList: some View {
@@ -94,5 +104,6 @@ struct GeneralViewContainer: View {
                       maxPrice: viewModel.maxPrice,
                       minPrice: viewModel.minPrice)
         }
+        .redacted(reason: viewModel.isLoading ? .placeholder : [])
     }
 }
