@@ -111,7 +111,7 @@
 		B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightPriceRepository.swift; sourceTree = "<group>"; };
 		B5823C822B3E04D000A795D0 /* LightPriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponse.swift; sourceTree = "<group>"; };
 		B5823C852B3E04E200A795D0 /* LightPriceResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponseDTO.swift; sourceTree = "<group>"; };
-		B586C29F2B3DCB63007F22FB /* LightPriceApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightPriceApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B586C29F2B3DCB63007F22FB /* iLuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceApp.swift; sourceTree = "<group>"; };
 		B586C2A42B3DCB63007F22FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B586C2A62B3DCB64007F22FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -459,7 +459,7 @@
 		B586C2A02B3DCB63007F22FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B586C29F2B3DCB63007F22FB /* LightPriceApp.app */,
+				B586C29F2B3DCB63007F22FB /* iLuz.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -560,9 +560,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B586C29E2B3DCB63007F22FB /* LightPriceApp */ = {
+		B586C29E2B3DCB63007F22FB /* iLuz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "LightPriceApp" */;
+			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "iLuz" */;
 			buildPhases = (
 				1EE62E9B093F10E84C519552 /* [CP] Check Pods Manifest.lock */,
 				B586C29B2B3DCB63007F22FB /* Sources */,
@@ -573,9 +573,9 @@
 			);
 			dependencies = (
 			);
-			name = LightPriceApp;
+			name = iLuz;
 			productName = LightPriceApp;
-			productReference = B586C29F2B3DCB63007F22FB /* LightPriceApp.app */;
+			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -607,7 +607,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B586C29E2B3DCB63007F22FB /* LightPriceApp */,
+				B586C29E2B3DCB63007F22FB /* iLuz */,
 			);
 		};
 /* End PBXProject section */
@@ -920,7 +920,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "LightPriceApp" */ = {
+		B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "iLuz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B586C2AF2B3DCB64007F22FB /* Debug */,
