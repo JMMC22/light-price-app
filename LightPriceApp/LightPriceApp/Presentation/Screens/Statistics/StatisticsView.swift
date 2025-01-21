@@ -84,7 +84,14 @@ struct StatisticsContainerView: View {
                 .foregroundStyle(LinearGradient(colors: [.primaryColor.opacity(0.6)],
                                                 startPoint: .top, endPoint: .bottom))
             }
-            .chartXAxis(.automatic) // TODO: Date axis
+            .chartXAxis {
+                AxisMarks { value in
+                    AxisValueLabel {
+                        Text(String(describing: value.as(String.self) ?? "-"))
+                            .rotationEffect(.degrees(-80))
+                    }
+                }
+            }
             .chartYAxis(.hidden) // TODO: Prices axis
         }
     }
