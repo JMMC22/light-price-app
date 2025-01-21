@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CF7223F2D402CF70022B39F /* LightAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF7223E2D402CF70022B39F /* LightAppliances.swift */; };
 		B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */; };
 		B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689F12B3EBD34007CD0D1 /* Colors.swift */; };
 		B51689F52B3EBD84007CD0D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51689F42B3EBD84007CD0D1 /* Colors.xcassets */; };
@@ -69,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CF7223E2D402CF70022B39F /* LightAppliances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightAppliances.swift; sourceTree = "<group>"; };
 		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
 		84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.debug.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPriceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -420,6 +422,7 @@
 				B5823C732B3DFD8300A795D0 /* LightPrice */,
 				B51689EC2B3EB6A4007CD0D1 /* LightPriceData */,
 				B5823C812B3E04BF00A795D0 /* LightPriceResponse */,
+				0CF7223E2D402CF70022B39F /* LightAppliances.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
+				0CF7223F2D402CF70022B39F /* LightAppliances.swift in Sources */,
 				B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */,
 				B59C85312B432BE300D00CEB /* SettingsSection.swift in Sources */,
 				B5168A1E2B3ED3FD007CD0D1 /* DateFormatterExtension.swift in Sources */,
