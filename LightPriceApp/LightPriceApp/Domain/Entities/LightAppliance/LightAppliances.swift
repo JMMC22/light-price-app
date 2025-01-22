@@ -14,6 +14,23 @@ enum LightAppliances: CaseIterable {
     case heater
     case iron
     case washingMachine
+    
+    var icon: String {
+        switch self {
+        case .airConditioning:
+            return "air-conditiner"
+        case .dryer:
+            return "dryer"
+        case .electricCar:
+            return "electric-car"
+        case .heater:
+            return "heater"
+        case .iron:
+            return "iron"
+        case .washingMachine:
+            return "washing-machine"
+        }
+    }
 
     // Average consumption (kWh/h)
     var consumptionPerHour: Double {
