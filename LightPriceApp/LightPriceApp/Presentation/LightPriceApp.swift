@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct LightPriceApp: App {
 
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
     @AppStorage("darkMode") private var darkModeIsOn: Bool = false
 
     var body: some Scene {

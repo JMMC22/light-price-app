@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */; };
+		0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */; };
+		0C6B4A062D416B7100F95FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */; };
 		0C7C39F92D411490000204BC /* LightApplianceCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C39F82D411490000204BC /* LightApplianceCost.swift */; };
 		0CF7223F2D402CF70022B39F /* LightAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF7223E2D402CF70022B39F /* LightAppliances.swift */; };
 		B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */; };
@@ -72,6 +74,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C7C39F82D411490000204BC /* LightApplianceCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightApplianceCost.swift; sourceTree = "<group>"; };
 		0CF7223E2D402CF70022B39F /* LightAppliances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightAppliances.swift; sourceTree = "<group>"; };
 		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -182,6 +186,9 @@
 		B51689EF2B3EBD0B007CD0D1 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */,
+				B586C2A42B3DCB63007F22FB /* ContentView.swift */,
+				B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */,
 				B5168A152B3EC67C007CD0D1 /* Components */,
 				B51689F02B3EBD20007CD0D1 /* DesignSystem */,
 				B5168A252B3EE6BB007CD0D1 /* Localization */,
@@ -520,9 +527,8 @@
 			isa = PBXGroup;
 			children = (
 				B586C2A82B3DCB64007F22FB /* LightPriceApp.entitlements */,
+				0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */,
 				B5168A062B3EC18A007CD0D1 /* Info.plist */,
-				B586C2A42B3DCB63007F22FB /* ContentView.swift */,
-				B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */,
 				B586C2A62B3DCB64007F22FB /* Assets.xcassets */,
 				B5823C7C2B3E002900A795D0 /* Data */,
 				B5823C712B3DFCBC00A795D0 /* Domain */,
@@ -687,6 +693,7 @@
 				B5168A0D2B3EC3A7007CD0D1 /* Roboto-Italic.ttf in Resources */,
 				B5168A272B3EE742007CD0D1 /* Localizable.xcstrings in Resources */,
 				B5168A0C2B3EC3A5007CD0D1 /* Roboto-BoldItalic.ttf in Resources */,
+				0C6B4A062D416B7100F95FC5 /* GoogleService-Info.plist in Resources */,
 				B5168A102B3EC3AE007CD0D1 /* Roboto-Medium.ttf in Resources */,
 				B5168A122B3EC3B2007CD0D1 /* Roboto-Regular.ttf in Resources */,
 				B5168A092B3EC39B007CD0D1 /* Roboto-Black.ttf in Resources */,
@@ -729,6 +736,7 @@
 				B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
+				0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */,
 				0CF7223F2D402CF70022B39F /* LightAppliances.swift in Sources */,
 				B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */,
 				B59C85312B432BE300D00CEB /* SettingsSection.swift in Sources */,
