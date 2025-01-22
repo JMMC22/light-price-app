@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum LightAppliances {
+enum LightAppliances: CaseIterable {
     case airConditioning
     case dryer
     case electricCar
@@ -52,6 +52,12 @@ enum LightAppliances {
 
     var totalConsumption: Double {
         return consumptionPerHour * typicalDuration
+    }
+}
+
+extension LightAppliances {
+    func calculateCost(averagePrice: Double) -> Double {
+        return totalConsumption * averagePrice
     }
 }
 

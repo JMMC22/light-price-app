@@ -9,12 +9,13 @@ import Foundation
 
 class StatisticsViewModel: ObservableObject {
 
-    @Published var allPrices: [LightPrice] = []
+    @Published var allPrices: [LightPrice]
     @Published var bestRange: LightPriceBestRange
+    @Published var appliancesCosts: [LightApplianceCost]
 
     @Published var range: (Int, Int) = (0, 24) {
         didSet {
-            getBestHourRange()
+            updateUI(prices: allPrices)
         }
     }
 
@@ -22,7 +23,9 @@ class StatisticsViewModel: ObservableObject {
 
     init(lightPriceRespository: LightPriceRepository) {
         self.lightPriceRespository = lightPriceRespository
+        self.allPrices = []
         self.bestRange = LightPriceBestRange(startHour: "", endHour: "", averagePrice: 0)
+        self.appliancesCosts = []
     }
 
     func viewDidLoad() async {
@@ -45,8 +48,7 @@ extension StatisticsViewModel {
 
     private func fetchDataDidSuccess(_ response: LightPriceData) {
         DispatchQueue.main.async {
-            self.allPrices = response.prices
-            self.getBestHourRange()
+            self.updateUI(prices: response.prices)
         }
     }
 
@@ -56,11 +58,28 @@ extension StatisticsViewModel {
 }
 
 extension StatisticsViewModel {
-    func getBestHourRange() {
+
+    private func updateUI(prices: [LightPrice]) {
+        self.allPrices = prices
+
+        let bestRange = getBestHourRange()
+        let appliancesCosts = getLightAppliancesCosts(avgPrice: bestRange.averagePrice)
+
+        self.bestRange = bestRange
+        self.appliancesCosts = appliancesCosts
+    }
+
+    func getBestHourRange() -> LightPriceBestRange {
         let startHour = String(format: "%02d", range.0)
         let endHour = String(format: "%02d", range.1)
-
         let range = lightPriceRespository.findBestPriceRange(for: allPrices, withHours: 3, from: startHour, to: endHour)
-        self.bestRange = range
+        return range
+    }
+
+    func getLightAppliancesCosts(avgPrice: Double) -> [LightApplianceCost] {
+        let appliancesCost = LightAppliances.allCases.map { appliance in
+            LightApplianceCost(appliance: appliance, cost: appliance.calculateCost(averagePrice: avgPrice))
+        }
+        return appliancesCost
     }
 }
