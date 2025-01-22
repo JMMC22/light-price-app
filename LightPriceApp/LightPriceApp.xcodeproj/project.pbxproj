@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */; };
 		0C7C39F92D411490000204BC /* LightApplianceCost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7C39F82D411490000204BC /* LightApplianceCost.swift */; };
 		0CF7223F2D402CF70022B39F /* LightAppliances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF7223E2D402CF70022B39F /* LightAppliances.swift */; };
 		B51689EE2B3EB6B5007CD0D1 /* LightPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */; };
@@ -145,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */,
+				0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +626,9 @@
 			dependencies = (
 			);
 			name = iLuz;
+			packageProductDependencies = (
+				0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */,
+			);
 			productName = LightPriceApp;
 			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
 			productType = "com.apple.product-type.application";
@@ -653,6 +658,9 @@
 				es,
 			);
 			mainGroup = B586C2962B3DCB63007F22FB;
+			packageReferences = (
+				0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B586C2A02B3DCB63007F22FB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -986,6 +994,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B586C2972B3DCB63007F22FB /* Project object */;
 }
