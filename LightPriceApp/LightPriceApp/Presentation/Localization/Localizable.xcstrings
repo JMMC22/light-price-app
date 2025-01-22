@@ -229,7 +229,20 @@
       }
     },
     "Date" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Date"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha"
+          }
+        }
+      }
     },
     "dryer" : {
       "extractionState" : "manual",
@@ -321,14 +334,31 @@
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "iron"
+            "state" : "translated",
+            "value" : "Iron"
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plancha"
+          }
+        }
+      }
+    },
+    "no.information.range" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "At least a range of 3 hrs"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al menos tiene que ser un rango de 3 hrs"
           }
         }
       }
@@ -351,15 +381,34 @@
       }
     },
     "Price" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Price"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Precio"
+          }
+        }
+      }
     },
     "Settings" : {
       "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
-            "state" : "translated",
+            "state" : "needs_review",
             "value" : "Settings"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
           }
         }
       }
@@ -452,6 +501,12 @@
     "washing.machine" : {
       "extractionState" : "manual",
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Washing machine"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",

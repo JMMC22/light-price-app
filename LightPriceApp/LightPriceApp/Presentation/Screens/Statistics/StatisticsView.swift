@@ -106,8 +106,13 @@ struct StatisticsContainerView: View {
 
             HourRangeSliderView(range: $viewModel.range)
 
-            Text(viewModel.bestRange.startHour + "-" + viewModel.bestRange.endHour + "h")
-                .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+            if (viewModel.range.1 - viewModel.range.0) < 3 {
+                Text("no.information.range")
+                    .LPFont(.Roboto(12, weight: .blackItalic), color: .gray)
+            } else {
+                Text(viewModel.bestRange.startHour + "-" + viewModel.bestRange.endHour + "h")
+                    .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+            }
         }
     }
     
