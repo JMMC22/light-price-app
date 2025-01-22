@@ -14,6 +14,32 @@
         }
       }
     },
+    "|" : {
+
+    },
+    "~ %.1f h" : {
+
+    },
+    "~ %.2f kWh/h" : {
+
+    },
+    "air.conditioning" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Air conditioner"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aire acondicionado"
+          }
+        }
+      }
+    },
     "appearance" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -205,6 +231,40 @@
     "Date" : {
 
     },
+    "dryer" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Dryer"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Secadora"
+          }
+        }
+      }
+    },
+    "electric.car" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Electric car"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coche eléctrico"
+          }
+        }
+      }
+    },
     "general.price.list.title" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -235,6 +295,40 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "¡Vaya! Parece que ha ocurrido un error. Inténtelo de nuevo más tarde."
+          }
+        }
+      }
+    },
+    "heater" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Heater"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Calefacción"
+          }
+        }
+      }
+    },
+    "iron" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "iron"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plancha"
           }
         }
       }
@@ -351,6 +445,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estadísticas"
+          }
+        }
+      }
+    },
+    "washing.machine" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lavadora"
           }
         }
       }

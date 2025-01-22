@@ -58,6 +58,8 @@ struct StatisticsContainerView: View {
             todayChart()
             Divider()
             bestRange()
+            Divider()
+            appliancesCosts()
         }
     }
 
@@ -106,6 +108,42 @@ struct StatisticsContainerView: View {
 
             Text(viewModel.bestRange.startHour + "-" + viewModel.bestRange.endHour + "h")
                 .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+        }
+    }
+    
+    private func appliancesCosts() -> some View {
+        LazyVGrid(columns: [.init(alignment: .center), .init(alignment: .center)]) {
+            ForEach(viewModel.appliancesCosts) { appliance in
+                HStack {
+                    Image(appliance.appliance.icon)
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .foregroundStyle(Color.customBlack)
+
+                    VStack(spacing: 2) {
+                        Text(LocalizedStringKey(appliance.appliance.title))
+                            .LPFont(.Roboto(12, weight: .semiBold), color: .customBlack)
+                        Divider()
+                        
+                        HStack(alignment: .center, spacing: 2) {
+                            Text("~ \(appliance.appliance.typicalDuration, specifier: "%.1f") h")
+                            Text("|")
+                            Text("~ \(appliance.appliance.consumptionPerHour, specifier: "%.2f") kWh/h")
+                        }
+                        .LPFont(.Roboto(10, weight: .regular), color: .gray)
+
+                        Text(String(format: "%.2f €", appliance.cost))
+                            .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .center)
+                }
+                .padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .background(Color.gray.opacity(0.1))
+                .cornerRadius(12)
+                .shadow(color: Color.black.opacity(0.1), radius: 4, x: 0, y: 2)
+            }
         }
     }
 }
