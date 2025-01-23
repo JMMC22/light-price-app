@@ -26,7 +26,7 @@ struct HourRangeSliderView: View {
                 title()
                 slider()
             }
-            .frame(maxHeight: geometry.size.height)
+            .frame(height: geometry.size.height)
             .onAppear {
                 totalScreen = geometry.size.width - offsetValue
                 widthTow = totalScreen

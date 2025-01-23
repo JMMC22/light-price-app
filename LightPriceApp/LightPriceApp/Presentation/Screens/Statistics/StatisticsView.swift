@@ -102,7 +102,6 @@ struct StatisticsContainerView: View {
         VStack(alignment: .center, spacing: 32) {
             Text("statistics.best.description")
                 .LPFont(.Roboto(14, weight: .bold), color: .gray)
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
 
             HourRangeSliderView(range: $viewModel.range)
 
@@ -114,6 +113,7 @@ struct StatisticsContainerView: View {
                     .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
             }
         }
+        .fixedSize(horizontal: false, vertical: true)
     }
     
     private func appliancesCosts() -> some View {
