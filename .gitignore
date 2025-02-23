@@ -90,3 +90,23 @@ fastlane/test_output
 iOSInjectionProject/
 
 GoogleService-Info.plist
+
+# Archivos generados por SonarScanner
+.sonarqube/
+sonar-report.json
+swiftlint.json
+
+# Archivos de Fastlane que no necesitas subir
+fastlane/report.xml
+fastlane/README.md
+fastlane/screenshots/
+fastlane/test_output/
+
+# Xcode y DerivedData
+DerivedData/
+xcuserdata/
+*.xcworkspace/
+*.xccheckout
+
+# Pods y dependencias (si usas CocoaPods)
+Pods/
