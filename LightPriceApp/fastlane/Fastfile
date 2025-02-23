@@ -1,0 +1,30 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Sonar scanner"
+  lane :sonar do
+    sonar_scanner(
+      project_key: "light-price-app",
+      organization: "JMMC22",
+      sources_path: "src",
+      binary_path: "build",
+      derived_data_path: "DerivedData",
+      extra_args: "-Dsonar.swift.exclusions=\"**/Pods/**,**/*.h\""
+    )
+  end
+end
