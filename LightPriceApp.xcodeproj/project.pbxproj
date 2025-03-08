@@ -70,7 +70,6 @@
 		B5BB560B2B400B1100669F76 /* LightPriceStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560A2B400B1100669F76 /* LightPriceStatus.swift */; };
 		B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB560C2B4010EF00669F76 /* Date+getHour.swift */; };
 		B5BB56112B40166900669F76 /* CalendarDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BB56102B40166900669F76 /* CalendarDropdown.swift */; };
-		F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,9 +77,6 @@
 		0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0C7C39F82D411490000204BC /* LightApplianceCost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightApplianceCost.swift; sourceTree = "<group>"; };
 		0CF7223E2D402CF70022B39F /* LightAppliances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightAppliances.swift; sourceTree = "<group>"; };
-		2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.release.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.release.xcconfig"; sourceTree = "<group>"; };
-		84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LightPriceApp.debug.xcconfig"; path = "Target Support Files/Pods-LightPriceApp/Pods-LightPriceApp.debug.xcconfig"; sourceTree = "<group>"; };
-		B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LightPriceApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B51689ED2B3EB6B5007CD0D1 /* LightPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceData.swift; sourceTree = "<group>"; };
 		B51689F12B3EBD34007CD0D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		B51689F42B3EBD84007CD0D1 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -149,7 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F92017F875635645D2D80B91 /* Pods_LightPriceApp.framework in Frameworks */,
 				0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,15 +159,6 @@
 				0C7C39F82D411490000204BC /* LightApplianceCost.swift */,
 			);
 			path = LightAppliance;
-			sourceTree = "<group>";
-		};
-		1DB56DF3BED2DC0A5AF3B60B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */,
-				2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		B51689EC2B3EB6A4007CD0D1 /* LightPriceData */ = {
@@ -510,8 +496,6 @@
 			children = (
 				B586C2A12B3DCB63007F22FB /* LightPriceApp */,
 				B586C2A02B3DCB63007F22FB /* Products */,
-				1DB56DF3BED2DC0A5AF3B60B /* Pods */,
-				E38CFA51760552FB46E16B9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -607,14 +591,6 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
-		E38CFA51760552FB46E16B9F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B3951AABDF3553F5DF5DB714 /* Pods_LightPriceApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -622,7 +598,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B586C2AE2B3DCB64007F22FB /* Build configuration list for PBXNativeTarget "iLuz" */;
 			buildPhases = (
-				1EE62E9B093F10E84C519552 /* [CP] Check Pods Manifest.lock */,
 				B586C29B2B3DCB63007F22FB /* Sources */,
 				B586C29C2B3DCB63007F22FB /* Frameworks */,
 				B586C29D2B3DCB63007F22FB /* Resources */,
@@ -727,28 +702,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n\n";
-		};
-		1EE62E9B093F10E84C519552 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LightPriceApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -924,7 +877,6 @@
 		};
 		B586C2AF2B3DCB64007F22FB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84AAF8E076ECBB59D23D34CC /* Pods-LightPriceApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -965,7 +917,6 @@
 		};
 		B586C2B02B3DCB64007F22FB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2AF2C15F541549545A3492CF /* Pods-LightPriceApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
