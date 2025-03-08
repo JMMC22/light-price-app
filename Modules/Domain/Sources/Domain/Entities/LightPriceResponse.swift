@@ -8,7 +8,7 @@
 import Foundation
 
 public struct LightPriceResponse {
-    let prices: [LightPrice]
+    public let prices: [LightPrice]
 
     public init(prices: [LightPrice]) {
         self.prices = prices
