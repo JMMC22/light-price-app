@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0C40C95B2D7C487E007F896A /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C95A2D7C487E007F896A /* Network */; };
-		0C40C9602D7C87C9007F896A /* LightPriceDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40C95E2D7C87C9007F896A /* LightPriceDTO.swift */; };
-		0C40C9622D7C87D3007F896A /* LightPriceResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C40C9612D7C87D2007F896A /* LightPriceResponseDTO.swift */; };
 		0C40C9642D7C8816007F896A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C9632D7C8816007F896A /* Domain */; };
+		0C40C9662D7C9AB9007F896A /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C9652D7C9AB9007F896A /* Data */; };
 		0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */; };
 		0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */; };
 		0C6B4A062D416B7100F95FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */; };
@@ -44,8 +43,6 @@
 		B54F57632B6CD3A6004192DE /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F57622B6CD3A6004192DE /* StatisticsView.swift */; };
 		B54F57652B6CD4F5004192DE /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F57642B6CD4F5004192DE /* StatisticsViewModel.swift */; };
 		B54F576B2B6CF819004192DE /* HourRangeSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B54F576A2B6CF819004192DE /* HourRangeSliderView.swift */; };
-		B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */; };
-		B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */; };
 		B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */; };
 		B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B586C2A42B3DCB63007F22FB /* ContentView.swift */; };
 		B586C2A72B3DCB64007F22FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B586C2A62B3DCB64007F22FB /* Assets.xcassets */; };
@@ -59,8 +56,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C40C95E2D7C87C9007F896A /* LightPriceDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LightPriceDTO.swift; sourceTree = "<group>"; };
-		0C40C9612D7C87D2007F896A /* LightPriceResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceResponseDTO.swift; sourceTree = "<group>"; };
 		0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B51689F12B3EBD34007CD0D1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -94,8 +89,6 @@
 		B54F57622B6CD3A6004192DE /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		B54F57642B6CD4F5004192DE /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 		B54F576A2B6CF819004192DE /* HourRangeSliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourRangeSliderView.swift; sourceTree = "<group>"; };
-		B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceEndpoints.swift; sourceTree = "<group>"; };
-		B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLightPriceRepository.swift; sourceTree = "<group>"; };
 		B586C29F2B3DCB63007F22FB /* iLuz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iLuz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B586C2A22B3DCB63007F22FB /* LightPriceApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightPriceApp.swift; sourceTree = "<group>"; };
 		B586C2A42B3DCB63007F22FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +110,7 @@
 			files = (
 				0C40C9642D7C8816007F896A /* Domain in Frameworks */,
 				0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */,
+				0C40C9662D7C9AB9007F896A /* Data in Frameworks */,
 				0C40C95B2D7C487E007F896A /* Network in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,15 +123,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0C40C95F2D7C87C9007F896A /* DataTransfer */ = {
-			isa = PBXGroup;
-			children = (
-				0C40C9612D7C87D2007F896A /* LightPriceResponseDTO.swift */,
-				0C40C95E2D7C87C9007F896A /* LightPriceDTO.swift */,
-			);
-			path = DataTransfer;
 			sourceTree = "<group>";
 		};
 		B51689EF2B3EBD0B007CD0D1 /* Presentation */ = {
@@ -276,15 +261,6 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
-		B51F4D332B3DF60100D69D65 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				0C40C95F2D7C87C9007F896A /* DataTransfer */,
-				B5823C6E2B3DFB5F00A795D0 /* Endpoints */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		B530394F2CE1EC1500A142BD /* Error */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,31 +312,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		B5823C6E2B3DFB5F00A795D0 /* Endpoints */ = {
-			isa = PBXGroup;
-			children = (
-				B5823C6F2B3DFB7200A795D0 /* LightPriceEndpoints.swift */,
-			);
-			path = Endpoints;
-			sourceTree = "<group>";
-		};
-		B5823C7C2B3E002900A795D0 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				B51F4D332B3DF60100D69D65 /* Network */,
-				B5823C7D2B3E003900A795D0 /* Repositories */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		B5823C7D2B3E003900A795D0 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				B5823C7E2B3E004500A795D0 /* DefaultLightPriceRepository.swift */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
 		B586C2962B3DCB63007F22FB = {
 			isa = PBXGroup;
 			children = (
@@ -385,7 +336,6 @@
 				0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */,
 				B5168A062B3EC18A007CD0D1 /* Info.plist */,
 				B586C2A62B3DCB64007F22FB /* Assets.xcassets */,
-				B5823C7C2B3E002900A795D0 /* Data */,
 				B51F4D322B3DF5F200D69D65 /* Infrastructure */,
 				B51689EF2B3EBD0B007CD0D1 /* Presentation */,
 				B586C2A92B3DCB64007F22FB /* Preview Content */,
@@ -464,6 +414,7 @@
 				0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */,
 				0C40C95A2D7C487E007F896A /* Network */,
 				0C40C9632D7C8816007F896A /* Domain */,
+				0C40C9652D7C9AB9007F896A /* Data */,
 			);
 			productName = LightPriceApp;
 			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
@@ -564,7 +515,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C40C9602D7C87C9007F896A /* LightPriceDTO.swift in Sources */,
 				B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */,
 				B5168A082B3EC200007CD0D1 /* LPFont.swift in Sources */,
 				0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */,
@@ -574,9 +524,7 @@
 				B586C2A52B3DCB63007F22FB /* ContentView.swift in Sources */,
 				B54F57652B6CD4F5004192DE /* StatisticsViewModel.swift in Sources */,
 				B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */,
-				B5823C702B3DFB7200A795D0 /* LightPriceEndpoints.swift in Sources */,
 				B5168A212B3EDD48007CD0D1 /* PriceProgressBar.swift in Sources */,
-				0C40C9622D7C87D3007F896A /* LightPriceResponseDTO.swift in Sources */,
 				B5168A192B3ECA72007CD0D1 /* PricePanelViewModel.swift in Sources */,
 				B54F57632B6CD3A6004192DE /* StatisticsView.swift in Sources */,
 				B54F576B2B6CF819004192DE /* HourRangeSliderView.swift in Sources */,
@@ -585,7 +533,6 @@
 				B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */,
-				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B530FB782B3F3F60004297E3 /* PriceItemList.swift in Sources */,
 				B530FB732B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift in Sources */,
 				B586C2A32B3DCB63007F22FB /* LightPriceApp.swift in Sources */,
@@ -835,6 +782,10 @@
 		0C40C9632D7C8816007F896A /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
+		};
+		0C40C9652D7C9AB9007F896A /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
 		};
 		0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;

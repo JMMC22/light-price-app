@@ -8,6 +8,7 @@
 import SwiftUI
 import Charts
 import Network
+import Data
 
 struct StatisticsView: View {
 

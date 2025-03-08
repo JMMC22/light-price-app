@@ -8,11 +8,11 @@
 import Foundation
 import Network
 
-enum LightPriceEndpoints {
+enum LightPriceEndpoint {
     case data(date: String)
 }
 
-extension LightPriceEndpoints: Endpoint {
+extension LightPriceEndpoint: Endpoint {
 
     var host: String {
         return "api.esios.ree.es"

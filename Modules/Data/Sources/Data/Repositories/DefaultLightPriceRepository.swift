@@ -9,19 +9,19 @@ import Foundation
 import Domain
 import Network
 
-final class DefaultLightPriceRepository {
+final public class DefaultLightPriceRepository {
 
     private let httpClient: HTTPClient
 
-    init(httpClient: HTTPClient) {
+    public init(httpClient: HTTPClient) {
         self.httpClient = httpClient
     }
 }
 
 extension DefaultLightPriceRepository: LightPriceRepository {
 
-    func getData(date: String) async -> Result<LightPriceData, RequestError> {
-        let endpoint = LightPriceEndpoints.data(date: date)
+    public func getData(date: String) async -> Result<LightPriceData, RequestError> {
+        let endpoint = LightPriceEndpoint.data(date: date)
         let result = await httpClient.request(endpoint: endpoint)
 
         switch result {
@@ -37,7 +37,7 @@ extension DefaultLightPriceRepository: LightPriceRepository {
         }
     }
 
-    func findBestPriceRange(for hoursPrices: [LightPrice], withHours count: Int, from startRange: String, to endRange: String) -> LightPriceBestRange {
+    public func findBestPriceRange(for hoursPrices: [LightPrice], withHours count: Int, from startRange: String, to endRange: String) -> LightPriceBestRange {
         let pricesFiltered = hoursPrices.filter({ $0.startHour >= startRange && $0.endHour <= endRange })
 
         guard !pricesFiltered.isEmpty, count > 0, count <= pricesFiltered.count else {

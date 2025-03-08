@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Network
+import Data
 
 struct GeneralView: View {
     
