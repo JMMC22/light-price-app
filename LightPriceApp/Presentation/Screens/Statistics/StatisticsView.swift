@@ -44,13 +44,13 @@ struct StatisticsContainerView: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
+
     private var header: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("statistics.tab")
-                .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+                .LPFont(.roboto(36, weight: .bold), color: .customBlack)
             Text("statistics.description")
-                .LPFont(.Roboto(14, weight: .bold), color: .gray)
+                .LPFont(.roboto(14, weight: .bold), color: .gray)
         }
     }
 
@@ -69,7 +69,7 @@ struct StatisticsContainerView: View {
 
             Text("statistics.progress.today")
                 .textCase(.uppercase)
-                .LPFont(.Roboto(10, weight: .blackItalic), color: .gray)
+                .LPFont(.roboto(10, weight: .blackItalic), color: .gray)
 
             Divider()
 
@@ -102,21 +102,21 @@ struct StatisticsContainerView: View {
     private func bestRange() -> some View {
         VStack(alignment: .center, spacing: 32) {
             Text("statistics.best.description")
-                .LPFont(.Roboto(14, weight: .bold), color: .gray)
+                .LPFont(.roboto(14, weight: .bold), color: .gray)
 
             HourRangeSliderView(range: $viewModel.range)
 
             if (viewModel.range.1 - viewModel.range.0) < 3 {
                 Text("no.information.range")
-                    .LPFont(.Roboto(12, weight: .blackItalic), color: .gray)
+                    .LPFont(.roboto(12, weight: .blackItalic), color: .gray)
             } else {
                 Text(viewModel.bestRange.startHour + "-" + viewModel.bestRange.endHour + "h")
-                    .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+                    .LPFont(.roboto(48, weight: .blackItalic), color: .customBlack)
             }
         }
         .fixedSize(horizontal: false, vertical: true)
     }
-    
+
     private func appliancesCosts() -> some View {
         LazyVGrid(columns: [.init(alignment: .center), .init(alignment: .center)]) {
             ForEach(viewModel.appliancesCosts) { appliance in
@@ -129,18 +129,18 @@ struct StatisticsContainerView: View {
 
                     VStack(spacing: 2) {
                         Text(LocalizedStringKey(appliance.appliance.title))
-                            .LPFont(.Roboto(12, weight: .semiBold), color: .customBlack)
+                            .LPFont(.roboto(12, weight: .semiBold), color: .customBlack)
                         Divider()
-                        
+
                         HStack(alignment: .center, spacing: 2) {
                             Text("~ \(appliance.appliance.typicalDuration, specifier: "%.1f") h")
                             Text("|")
                             Text("~ \(appliance.appliance.consumptionPerHour, specifier: "%.2f") kWh/h")
                         }
-                        .LPFont(.Roboto(10, weight: .regular), color: .gray)
+                        .LPFont(.roboto(10, weight: .regular), color: .gray)
 
                         Text(String(format: "%.2f €", appliance.cost))
-                            .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                            .LPFont(.roboto(14, weight: .bold), color: .customBlack)
                     }
                     .frame(maxWidth: .infinity, alignment: .center)
                 }

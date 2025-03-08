@@ -20,10 +20,10 @@ struct PriceItemList: View {
                 .fill(priceColor)
                 .frame(width: 18, height: 18)
             Text(hourRange + "h")
-                .LPFont(.Roboto(18, weight: .mediumItalic), color: .customBlack)
+                .LPFont(.roboto(18, weight: .mediumItalic), color: .customBlack)
             Spacer()
             Text("currency.price \(price)")
-                .LPFont(.Roboto(18, weight: .bold), color: priceColor)
+                .LPFont(.roboto(18, weight: .bold), color: priceColor)
         }
     }
 

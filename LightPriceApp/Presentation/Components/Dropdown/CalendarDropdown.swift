@@ -22,21 +22,17 @@ struct CalendarDropdown: View {
     var body: some View {
         dropdown
             .overlay(overlayDatePicker, alignment: .topLeading)
-            .onAppear {
-                let time = DateFormatter.hour.string(from: Date())
-                let _ = print(time)
-            }
     }
 
     private var dropdown: some View {
-        Button(action:  { showDatePicker.toggle() }, label: {
+        Button(action: { showDatePicker.toggle() }, label: {
             HStack {
                 Text(selectedDate, style: .date)
                 Spacer()
                 Image(systemName: "calendar")
             }
         })
-        .LPFont(.Roboto(16, weight: .medium), color: .customBlack)
+        .LPFont(.roboto(16, weight: .medium), color: .customBlack)
         .padding()
         .overlay(
             RoundedRectangle(cornerRadius: 8)

@@ -36,10 +36,10 @@ struct SettingsContainerView: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
+
     private var title: some View {
         Text("settings.title")
-            .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+            .LPFont(.roboto(36, weight: .bold), color: .customBlack)
     }
 
     private var content: some View {
@@ -63,9 +63,9 @@ struct NotificationsSettingsSectionView: View {
             Toggle(isOn: $dailyNotificationIsOn) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("daily.notifications")
-                        .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                        .LPFont(.roboto(14, weight: .bold), color: .customBlack)
                     Text("daily.notification.description")
-                        .LPFont(.Roboto(12, weight: .regular), color: .gray)
+                        .LPFont(.roboto(12, weight: .regular), color: .gray)
                 }
             }
             .tint(Color.primaryColor)
@@ -91,7 +91,7 @@ struct AppearanceSettingsSectionView: View {
             Toggle(isOn: $darkModeIsOn) {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("dark.mode.appearance")
-                        .LPFont(.Roboto(14, weight: .bold), color: .customBlack)
+                        .LPFont(.roboto(14, weight: .bold), color: .customBlack)
                 }
             }
             .tint(Color.primaryColor)
@@ -106,7 +106,7 @@ struct AppearanceSettingsSectionView: View {
 struct AppInformationSectionView: View {
     var body: some View {
         Text("v" + Bundle.getAppVersion() + " (\(Bundle.getBuildNumber()))")
-            .LPFont(.Roboto(12, weight: .regular), color: .gray)
+            .LPFont(.roboto(12, weight: .regular), color: .gray)
             .frame(maxWidth: .infinity, alignment: .trailing)
     }
 }
