@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 class StatisticsViewModel: ObservableObject {
 
@@ -53,7 +54,7 @@ extension StatisticsViewModel {
     }
 
     private func fetchDataDidFail(_ error: RequestError) {
-        print("||ERROR|| fetchData: \(error.customDescription)")
+        print("||ERROR|| fetchData: \(error.localizedDescription)")
     }
 }
 

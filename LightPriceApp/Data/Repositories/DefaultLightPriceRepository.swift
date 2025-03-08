@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import Network
 
 final class DefaultLightPriceRepository {
 
-    private let httpClient: HTTPClientProtocol
+    private let httpClient: HTTPClient
 
-    init(httpClient: HTTPClientProtocol) {
+    init(httpClient: HTTPClient) {
         self.httpClient = httpClient
     }
 }
@@ -20,10 +21,14 @@ extension DefaultLightPriceRepository: LightPriceRepository {
 
     func getData(date: String) async -> Result<LightPriceData, RequestError> {
         let endpoint = LightPriceEndpoints.data(date: date)
-        let result = await httpClient.request(endpoint: endpoint, responseModel: LightPriceResponseDTO.self)
+        let result = await httpClient.request(endpoint: endpoint)
 
         switch result {
         case .success(let response):
+            guard let response = try? JSONDecoder().decode(LightPriceResponseDTO.self,
+                                                           from: response) else {
+                return .failure(.decode)
+            }
             let data = LightPriceData(response.toDomain(), date: date)
             return .success(data)
         case .failure(let error):

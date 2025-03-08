@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C40C95B2D7C487E007F896A /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C95A2D7C487E007F896A /* Network */; };
 		0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */; };
 		0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */; };
 		0C6B4A062D416B7100F95FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */; };
@@ -37,10 +38,6 @@
 		B5168A272B3EE742007CD0D1 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */; };
 		B5168A2B2B3EF303007CD0D1 /* GeneralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A2A2B3EF303007CD0D1 /* GeneralView.swift */; };
 		B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5168A2C2B3EF30D007CD0D1 /* GeneralViewModel.swift */; };
-		B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D342B3DF61E00D69D65 /* Endpoint.swift */; };
-		B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D362B3DF63000D69D65 /* HTTPClient.swift */; };
-		B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D382B3DF64900D69D65 /* RequestError.swift */; };
-		B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */; };
 		B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */; };
 		B53039542CE1F57600A142BD /* Bundle+getAppVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */; };
 		B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */; };
@@ -103,10 +100,6 @@
 		B5168A262B3EE742007CD0D1 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		B5168A2A2B3EF303007CD0D1 /* GeneralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralView.swift; sourceTree = "<group>"; };
 		B5168A2C2B3EF30D007CD0D1 /* GeneralViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewModel.swift; sourceTree = "<group>"; };
-		B51F4D342B3DF61E00D69D65 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
-		B51F4D362B3DF63000D69D65 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		B51F4D382B3DF64900D69D65 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
-		B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMethod.swift; sourceTree = "<group>"; };
 		B53039502CE1EC1A00A142BD /* ErrorAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertView.swift; sourceTree = "<group>"; };
 		B53039532CE1F56D00A142BD /* Bundle+getAppVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getAppVersion.swift"; sourceTree = "<group>"; };
 		B53039552CE1F5C300A142BD /* Bundle+getBuildNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+getBuildNumber.swift"; sourceTree = "<group>"; };
@@ -146,12 +139,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */,
+				0C40C95B2D7C487E007F896A /* Network in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C40C9592D7C487E007F896A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0C7C39FA2D411497000204BC /* LightAppliance */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +319,6 @@
 			isa = PBXGroup;
 			children = (
 				B59C85322B432EDF00D00CEB /* Managers */,
-				B51F4D332B3DF60100D69D65 /* Network */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -327,10 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				B5823C6E2B3DFB5F00A795D0 /* Endpoints */,
-				B51F4D342B3DF61E00D69D65 /* Endpoint.swift */,
-				B51F4D362B3DF63000D69D65 /* HTTPClient.swift */,
-				B51F4D382B3DF64900D69D65 /* RequestError.swift */,
-				B51F4D3A2B3DF66800D69D65 /* RequestMethod.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -461,6 +457,7 @@
 		B5823C7C2B3E002900A795D0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B51F4D332B3DF60100D69D65 /* Network */,
 				B5823C7D2B3E003900A795D0 /* Repositories */,
 			);
 			path = Data;
@@ -496,6 +493,7 @@
 			children = (
 				B586C2A12B3DCB63007F22FB /* LightPriceApp */,
 				B586C2A02B3DCB63007F22FB /* Products */,
+				0C40C9592D7C487E007F896A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -610,6 +608,7 @@
 			name = iLuz;
 			packageProductDependencies = (
 				0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */,
+				0C40C95A2D7C487E007F896A /* Network */,
 			);
 			productName = LightPriceApp;
 			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
@@ -731,20 +730,16 @@
 				B54F57632B6CD3A6004192DE /* StatisticsView.swift in Sources */,
 				B54F576B2B6CF819004192DE /* HourRangeSliderView.swift in Sources */,
 				B5168A2D2B3EF30D007CD0D1 /* GeneralViewModel.swift in Sources */,
-				B51F4D392B3DF64900D69D65 /* RequestError.swift in Sources */,
 				B53039562CE1F5C900A142BD /* Bundle+getBuildNumber.swift in Sources */,
 				B5823C862B3E04E200A795D0 /* LightPriceResponseDTO.swift in Sources */,
 				B54F57682B6CF22D004192DE /* LightPriceBestRange.swift in Sources */,
 				B59C852D2B432A0A00D00CEB /* SettingsViewModel.swift in Sources */,
-				B51F4D352B3DF61E00D69D65 /* Endpoint.swift in Sources */,
 				B59C85372B43361900D00CEB /* LocalNotification.swift in Sources */,
 				B5168A172B3EC73D007CD0D1 /* PricePanel.swift in Sources */,
 				B53039512CE1EC1E00A142BD /* ErrorAlertView.swift in Sources */,
-				B51F4D372B3DF63000D69D65 /* HTTPClient.swift in Sources */,
 				B5BB560D2B4010EF00669F76 /* Date+getHour.swift in Sources */,
 				B5823C7F2B3E004500A795D0 /* DefaultLightPriceRepository.swift in Sources */,
 				B5823C782B3DFDAE00A795D0 /* LightPriceDTO.swift in Sources */,
-				B51F4D3B2B3DF66800D69D65 /* RequestMethod.swift in Sources */,
 				B530FB782B3F3F60004297E3 /* PriceItemList.swift in Sources */,
 				B530FB732B3F0ED7004297E3 /* PriceProgressPanelViewModel.swift in Sources */,
 				B5823C832B3E04D000A795D0 /* LightPriceResponse.swift in Sources */,
@@ -990,6 +985,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0C40C95A2D7C487E007F896A /* Network */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Network;
+		};
 		0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

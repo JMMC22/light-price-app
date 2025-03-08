@@ -7,13 +7,14 @@
 
 import SwiftUI
 import Charts
+import Network
 
 struct StatisticsView: View {
 
     @StateObject private var viewModel: StatisticsViewModel
 
     init() {
-        let lightPriceRepository = DefaultLightPriceRepository(httpClient: HTTPClient())
+        let lightPriceRepository = DefaultLightPriceRepository(httpClient: DefaultHTTPClient())
         self._viewModel = StateObject(wrappedValue: StatisticsViewModel(lightPriceRespository: lightPriceRepository))
     }
 

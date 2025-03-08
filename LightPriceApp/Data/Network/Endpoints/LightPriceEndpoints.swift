@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 enum LightPriceEndpoints {
     case data(date: String)
@@ -24,13 +25,13 @@ extension LightPriceEndpoints: Endpoint {
         }
     }
 
-    var method: RequestMethod {
+    var method: HTTPMethodType {
         return .get
     }
 
-    var headers: [String: String]? { return [:] }
+    var header: [String: String]? { return [:] }
 
-    var body: [String: String]? {
+    var body: [String: Any]? {
         return nil
     }
 

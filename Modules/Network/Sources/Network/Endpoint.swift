@@ -13,7 +13,7 @@ public protocol Endpoint {
     var queryParameters: [URLQueryItem]? { get }
 }
 
-extension Endpoint {
+public extension Endpoint {
     var scheme: String {
         return "https"
     }
