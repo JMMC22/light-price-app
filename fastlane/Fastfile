@@ -1,0 +1,36 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "SonarQube Analysis"
+  lane :run_sonar do
+    sonar_token = ENV['SONAR_TOKEN']
+    
+    sh "sonar-scanner \
+        -Dsonar.organization=jmmc22 \
+        -Dsonar.projectKey=JMMC22_light-price-app \
+        -Dsonar.sources=. \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=#{sonar_token} \
+        -Dsonar.language=swift \
+        -Dsonar.swift.project=LightPriceApp.xcodeproj \
+        -Dsonar.swift.workspace=LightPriceApp.xcworkspace \
+        -Dsonar.swift.appScheme=iLuz \
+        -Dsonar.swift.simulator='platform=iOS Simulator,name=iPhone 14,OS=latest'"
+  end
+end
+

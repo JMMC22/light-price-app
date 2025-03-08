@@ -1,0 +1,30 @@
+name: SonarCloud Analysis
+
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  sonarcloud:
+    name: SonarCloud Scan
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
+
+      - name: Install Dependencies
+        run: |
+          brew install fastlane
+          brew install sonar-scanner
+
+      - name: Run SonarCloud Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: fastlane run_sonar
+
