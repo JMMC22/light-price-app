@@ -1,19 +1,26 @@
 //
-//  HTTPClient.swift
-//  LightPriceApp
+//  File.swift
+//  
 //
-//  Created by José María Márquez Crespo on 28/12/23.
+//  Created by Márquez Crespo, José María on 8/3/25.
 //
 
 import Foundation
 
-protocol HTTPClientProtocol {
-    func request<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async -> Result<T, RequestError>
+public class DefaultHTTPClient {
+
+    private let session: URLSession
+
+    public init(session: URLSession = .shared) {
+        self.session = session
+    }
 }
 
-class HTTPClient: HTTPClientProtocol {
-    func request<T: Decodable>(endpoint: Endpoint, responseModel: T.Type) async -> Result<T, RequestError> {
+extension DefaultHTTPClient: HTTPClient {
+
+    public func request(endpoint: Endpoint) async -> Result<Data, RequestError> {
         var urlComponents = URLComponents()
+
         urlComponents.scheme = endpoint.scheme
         urlComponents.host = endpoint.host
         urlComponents.path = endpoint.path
@@ -28,34 +35,26 @@ class HTTPClient: HTTPClientProtocol {
 
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
-        request.allHTTPHeaderFields = endpoint.headers
+        request.allHTTPHeaderFields = endpoint.header
 
         if let body = endpoint.body {
             request.httpBody = try? JSONSerialization.data(withJSONObject: body, options: [])
         }
 
         do {
-            let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
+            let (data, response) = try await session.data(for: request, delegate: nil)
             guard let response = response as? HTTPURLResponse else {
                 return .failure(.noResponse)
             }
             switch response.statusCode {
             case 200...299:
-                do {
-                    let decodedResponse = try JSONDecoder().decode(responseModel, from: data)
-                    return .success(decodedResponse)
-                } catch {
-                    return .failure(.decode)
-                }
+                return .success(data)
             case 401:
                 return .failure(.unauthorized)
             default:
-                return .failure(.unexpectedStatusCode(description: response.description))
+                return .failure(.error(statusCode: response.statusCode, data: data))
             }
         } catch {
-            if (error as NSError).code == NSURLErrorCancelled {
-                return .failure(.cancelled)
-            }
             return .failure(.unknown)
         }
     }

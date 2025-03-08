@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Network
 
 protocol LightPriceRepository {
     func getData(date: String) async -> Result<LightPriceData, RequestError>

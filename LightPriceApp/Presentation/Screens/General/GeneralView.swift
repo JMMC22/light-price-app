@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import Network
 
 struct GeneralView: View {
     
     @StateObject private var viewModel: GeneralViewModel
 
     init() {
-        let repository = DefaultLightPriceRepository(httpClient: HTTPClient())
+        let repository = DefaultLightPriceRepository(httpClient: DefaultHTTPClient())
         self._viewModel = StateObject(wrappedValue: GeneralViewModel(lightPriceRespository: repository))
     }
 
