@@ -31,7 +31,9 @@ public extension LightPriceResponse {
     }
 
     var avgPrice: Double {
+        guard !prices.isEmpty else { return 0.0 }
         let allPrices: Double = prices.map({ $0.peninsulaPrice }).reduce(0, +)
         return allPrices / Double(prices.count)
     }
+
 }
