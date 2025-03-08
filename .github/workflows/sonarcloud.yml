@@ -7,31 +7,24 @@ on:
       - develop
 
 jobs:
-  sonar:
+  sonarcloud:
     name: SonarCloud Scan
     runs-on: macos-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-     - name: Debugging GitHub Actions
-  	run: |
-    	ls -la
-    	ls -la LightPriceApp
+      - name: Setup Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
-      - name: Set up Xcode
-        run: sudo xcode-select -s /Applications/Xcode.app
-
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
+          brew install fastlane
           brew install sonar-scanner
-          bundle install
 
-      - name: Run SonarCloud Analysis
+      - name: Run SonarCloud Scan
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: bundle exec fastlane sonar
+        run: fastlane run_sonar
 
