@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 struct LightPriceResponseDTO: Decodable {
     let voluntaryPrices: [LightPriceDTO]?

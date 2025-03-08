@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 import Network
 
 final class DefaultLightPriceRepository {

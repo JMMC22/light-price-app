@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct LightPriceData {
+public struct LightPriceData {
 
-    let date: String
-    let prices: [LightPrice]
-    let currentPrice: LightPrice?
-    let maxPrice: LightPrice?
-    let minPrice: LightPrice?
-    let avgPrice: Double
+    public let date: String
+    public let prices: [LightPrice]
+    public let currentPrice: LightPrice?
+    public let maxPrice: LightPrice?
+    public let minPrice: LightPrice?
+    public let avgPrice: Double
 
-    init(date: String, 
+    public init(date: String,
          prices: [LightPrice],
          currentPrice: LightPrice?,
          maxPrice: LightPrice?,
@@ -30,7 +30,7 @@ struct LightPriceData {
         self.avgPrice = avgPrice
     }
 
-    init(_ response: LightPriceResponse, date: String) {
+    public init(_ response: LightPriceResponse, date: String) {
         self.date = date
         self.prices = response.prices
         self.currentPrice = response.currentPrice

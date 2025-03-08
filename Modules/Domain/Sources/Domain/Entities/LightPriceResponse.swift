@@ -7,16 +7,21 @@
 
 import Foundation
 
-struct LightPriceResponse {
+public struct LightPriceResponse {
     let prices: [LightPrice]
+
+    public init(prices: [LightPrice]) {
+        self.prices = prices
+    }
 }
 
-extension LightPriceResponse {
+public extension LightPriceResponse {
 
     var currentPrice: LightPrice? {
         let currentHour = String(format: "%02d", Calendar.current.component(.hour, from: Date()))
         return prices.first(where: { $0.startHour == currentHour })
     }
+
     var maxPrice: LightPrice? {
         return prices.max(by: { $0.peninsulaPrice < $1.peninsulaPrice })
     }

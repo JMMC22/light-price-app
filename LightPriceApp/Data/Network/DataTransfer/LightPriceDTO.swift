@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 struct LightPriceDTO: Decodable {
     let date: String?

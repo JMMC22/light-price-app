@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 import Network
 
 class StatisticsViewModel: ObservableObject {

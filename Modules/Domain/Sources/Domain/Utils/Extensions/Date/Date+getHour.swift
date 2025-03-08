@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     func getHour() -> String {
         let calendar = Calendar.current
         let currentHour = calendar.component(.hour, from: self)

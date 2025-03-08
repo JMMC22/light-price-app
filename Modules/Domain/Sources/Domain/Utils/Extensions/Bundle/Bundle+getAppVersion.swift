@@ -7,8 +7,7 @@
 
 import Foundation
 
-extension Bundle {
-
+public extension Bundle {
     static func getAppVersion() -> String {
         if let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String {
             return appVersion
