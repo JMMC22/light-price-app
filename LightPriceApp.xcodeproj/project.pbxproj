@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		0C40C95B2D7C487E007F896A /* Network in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C95A2D7C487E007F896A /* Network */; };
 		0C40C9642D7C8816007F896A /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C9632D7C8816007F896A /* Domain */; };
-		0C40C9662D7C9AB9007F896A /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 0C40C9652D7C9AB9007F896A /* Data */; };
 		0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */; };
 		0C6B4A042D416B0300F95FC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6B4A032D416B0300F95FC5 /* AppDelegate.swift */; };
 		0C6B4A062D416B7100F95FC5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C6B4A052D416B7100F95FC5 /* GoogleService-Info.plist */; };
+		0CC0728C2D7CA59A008907F9 /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 0CC0728B2D7CA59A008907F9 /* Data */; };
 		B51689F22B3EBD34007CD0D1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689F12B3EBD34007CD0D1 /* Colors.swift */; };
 		B51689F52B3EBD84007CD0D1 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B51689F42B3EBD84007CD0D1 /* Colors.xcassets */; };
 		B51689F82B3EC0EB007CD0D1 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51689F72B3EC0EB007CD0D1 /* Fonts.swift */; };
@@ -110,7 +110,7 @@
 			files = (
 				0C40C9642D7C8816007F896A /* Domain in Frameworks */,
 				0C6B4A022D416A7D00F95FC5 /* FirebaseCrashlytics in Frameworks */,
-				0C40C9662D7C9AB9007F896A /* Data in Frameworks */,
+				0CC0728C2D7CA59A008907F9 /* Data in Frameworks */,
 				0C40C95B2D7C487E007F896A /* Network in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,13 +408,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				0C40C9692D7CA17A007F896A /* PBXTargetDependency */,
 			);
 			name = iLuz;
 			packageProductDependencies = (
 				0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */,
 				0C40C95A2D7C487E007F896A /* Network */,
 				0C40C9632D7C8816007F896A /* Domain */,
-				0C40C9652D7C9AB9007F896A /* Data */,
+				0CC0728B2D7CA59A008907F9 /* Data */,
 			);
 			productName = LightPriceApp;
 			productReference = B586C29F2B3DCB63007F22FB /* iLuz.app */;
@@ -447,6 +448,7 @@
 			mainGroup = B586C2962B3DCB63007F22FB;
 			packageReferences = (
 				0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0C40C9672D7CA047007F896A /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = B586C2A02B3DCB63007F22FB /* Products */;
 			projectDirPath = "";
@@ -544,6 +546,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0C40C9692D7CA17A007F896A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 0C40C9682D7CA17A007F896A /* SwiftLintBuildToolPlugin */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B586C2AC2B3DCB64007F22FB /* Debug */ = {
@@ -764,6 +773,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0C40C9672D7CA047007F896A /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.58.2;
+			};
+		};
 		0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -783,14 +800,19 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = Domain;
 		};
-		0C40C9652D7C9AB9007F896A /* Data */ = {
+		0C40C9682D7CA17A007F896A /* SwiftLintBuildToolPlugin */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Data;
+			package = 0C40C9672D7CA047007F896A /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
 		};
 		0C6B4A012D416A7D00F95FC5 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0C6B4A002D416A7D00F95FC5 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCrashlytics;
+		};
+		0CC0728B2D7CA59A008907F9 /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

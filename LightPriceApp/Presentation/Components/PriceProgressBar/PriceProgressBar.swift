@@ -23,7 +23,7 @@ struct PriceProgressBar: View {
                             startPoint: .leading,
                             endPoint: .trailing)
                     )
-                
+
                 Circle()
                     .fill(circleColor)
                     .shadow(radius: 2)

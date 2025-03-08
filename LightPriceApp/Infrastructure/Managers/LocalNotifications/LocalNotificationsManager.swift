@@ -17,7 +17,7 @@ class LocalNotificationsManager: ObservableObject {
     private init() {}
 
     func requestPermissions(completion: @escaping (Bool) -> Void) {
-        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+        notificationCenter.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, _) in
             completion(granted)
         }
     }

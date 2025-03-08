@@ -33,7 +33,6 @@ class StatisticsViewModel: ObservableObject {
     func viewDidLoad() async {
         await fetchData()
     }
-    
 }
 
 extension StatisticsViewModel {

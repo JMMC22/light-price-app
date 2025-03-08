@@ -24,7 +24,7 @@ class SettingsViewModel: ObservableObject {
         if value {
             let dailyNotification = LocalNotification(id: "dailyNotification",
                                                       title: "Nuevos precios disponibles",
-                                                      body: "¡Ya puede consultar los precios de la luz para mañana!", 
+                                                      body: "¡Ya puede consultar los precios de la luz para mañana!",
                                                       hour: 21,
                                                       repeats: true)
             LocalNotificationsManager.sharedInstance.scheduleNotification(dailyNotification)

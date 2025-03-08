@@ -12,7 +12,7 @@ import SwiftUI
 struct LPFont {
     var font: UIFont
 
-    static func Roboto(_ size: CGFloat, weight: FontWeight) -> LPFont {
+    static func roboto(_ size: CGFloat, weight: FontWeight) -> LPFont {
         let font = UIFont.font(type: .roboto, weight: weight, size: size)
         return LPFont(font: font)
     }

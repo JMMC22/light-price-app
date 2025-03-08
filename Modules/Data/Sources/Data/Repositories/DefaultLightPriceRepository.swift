@@ -37,27 +37,31 @@ extension DefaultLightPriceRepository: LightPriceRepository {
         }
     }
 
-    public func findBestPriceRange(for hoursPrices: [LightPrice], withHours count: Int, from startRange: String, to endRange: String) -> LightPriceBestRange {
+
+    public func findBestPriceRange(for hoursPrices: [LightPrice],
+                                   withHours count: Int,
+                                   from startRange: String,
+                                   to endRange: String) -> LightPriceBestRange {
         let pricesFiltered = hoursPrices.filter({ $0.startHour >= startRange && $0.endHour <= endRange })
 
-        guard !pricesFiltered.isEmpty, count > 0, count <= pricesFiltered.count else {
+        guard !pricesFiltered.isEmpty, count > .zero, count <= pricesFiltered.count else {
             return LightPriceBestRange(startHour: "", endHour: "", averagePrice: 0)
         }
 
-        var bestRange: (startHour: Int, endHour: Int, averagePrice: Double)? = nil
-        var currentRange: (startHour: Int, endHour: Int, averagePrice: Double)? = nil
+        var bestRange: (startHour: Int, endHour: Int, averagePrice: Double)?
+        var currentRange: (startHour: Int, endHour: Int, averagePrice: Double)?
 
-        for i in 0...(pricesFiltered.count - count) {
-            let subarray = Array(pricesFiltered[i..<(i + count)])
+        for value in 0...(pricesFiltered.count - count) {
+            let subarray = Array(pricesFiltered[value..<(value + count)])
             let totalPeninsulaPrice = subarray.reduce(0) { $0 + $1.peninsulaPrice }
             let averagePeninsulaPrice = totalPeninsulaPrice / Double(count)
 
             if let current = currentRange {
                 if averagePeninsulaPrice < current.averagePrice {
-                    currentRange = (startHour: i, endHour: i + count - 1, averagePrice: averagePeninsulaPrice)
+                    currentRange = (startHour: value, endHour: value + count - 1, averagePrice: averagePeninsulaPrice)
                 }
             } else {
-                currentRange = (startHour: i, endHour: i + count - 1, averagePrice: averagePeninsulaPrice)
+                currentRange = (startHour: value, endHour: value + count - 1, averagePrice: averagePeninsulaPrice)
             }
 
             if let best = bestRange {

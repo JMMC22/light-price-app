@@ -15,7 +15,7 @@ struct SettingsSection<Content: View>: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Text(LocalizedStringKey(title))
-                .LPFont(.Roboto(18, weight: .bold), color: .gray)
+                .LPFont(.roboto(18, weight: .bold), color: .gray)
             content()
             Divider()
         }

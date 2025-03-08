@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PriceProgressPanel: View {
-    
+
     @ObservedObject private var viewModel: PriceProgressPanelViewModel
 
     init(currentPrice: Double? = 0.0,
@@ -18,15 +18,15 @@ struct PriceProgressPanel: View {
                                                                                    minPrice: minPrice,
                                                                                    maxPrice: maxPrice))
     }
-    
+
     var body: some View {
         VStack(spacing: 12) {
             Text("current.price \(Date().getHour())")
                 .textCase(.uppercase)
-                .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
+                .LPFont(.roboto(16, weight: .bold), color: .customBlack)
 
             Text("currency.price \(viewModel.currentPrice)")
-                .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+                .LPFont(.roboto(48, weight: .blackItalic), color: .customBlack)
 
             PriceProgressBar(currentValue: Double(viewModel.currentPrice) ?? 0.0,
                              minValue: viewModel.minPrice,

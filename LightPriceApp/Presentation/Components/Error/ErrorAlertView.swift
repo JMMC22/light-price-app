@@ -14,7 +14,7 @@ struct ErrorAlertView: View {
             Image(systemName: "exclamationmark.shield.fill")
             Text("generic.error")
         }
-        .LPFont(.Roboto(14, weight: .semiBold), color: .white)
+        .LPFont(.roboto(14, weight: .semiBold), color: .white)
         .padding(8)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 4).fill(.customRed01))

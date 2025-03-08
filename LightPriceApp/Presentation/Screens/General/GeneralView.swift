@@ -10,7 +10,7 @@ import Network
 import Data
 
 struct GeneralView: View {
-    
+
     @StateObject private var viewModel: GeneralViewModel
 
     init() {
@@ -42,7 +42,7 @@ struct GeneralView: View {
 struct GeneralViewContainer: View {
 
     @ObservedObject var viewModel: GeneralViewModel
-    
+
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             welcomeDescription
@@ -60,13 +60,13 @@ struct GeneralViewContainer: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
     }
-    
+
     private var welcomeDescription: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("welcome.title")
-                .LPFont(.Roboto(36, weight: .bold), color: .customBlack)
+                .LPFont(.roboto(36, weight: .bold), color: .customBlack)
             Text("welcome.description")
-                .LPFont(.Roboto(18, weight: .bold), color: .gray)
+                .LPFont(.roboto(18, weight: .bold), color: .gray)
         }
     }
 
@@ -97,11 +97,11 @@ struct GeneralViewContainer: View {
                    type: .maxPrice)
         .redacted(reason: viewModel.isLoading ? .placeholder : [])
     }
-    
+
     private var priceList: some View {
         VStack(spacing: 16) {
             Text("general.price.list.title")
-                .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
+                .LPFont(.roboto(16, weight: .bold), color: .customBlack)
             PriceList(prices: viewModel.allPrices,
                       maxPrice: viewModel.maxPrice,
                       minPrice: viewModel.minPrice)

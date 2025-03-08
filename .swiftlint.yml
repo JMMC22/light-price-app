@@ -1,0 +1,26 @@
+# Disable rules that may be annoying or unnecessary in some projects
+disabled_rules:
+  - force_cast  # Disable the rule that prohibits forced casting (e.g., as!).
+  - force_try   # Disable the rule that prohibits the use of try! (forced exceptions).
+  - unused_closure_parameter # Disable the warning for unused parameters in closures.
+
+# Include folders or files to apply rules to
+included:
+  - LightPriceApp   # Put the name of your main source folder here.
+
+# Exclude certain directories or files from being checked
+excluded:
+  - Pods   # If using CocoaPods, you probably want to exclude this folder.
+  - Carthage # If using Carthage, exclude this folder.
+  - DerivedData # Exclude the derived data folder from Xcode.
+
+# Enable some important rules that promote good practices
+opt_in_rules:
+  - empty_count  # Encourage using `.isEmpty` instead of `.count == 0`.
+  - nesting  # Avoid excessive nesting of functions/closures.
+  - return_arrow_whitespace # Requires space around `->` in function signatures.
+
+# Formatting rules
+line_length:
+  warning: 120   # Set a warning limit of 120 characters per line.
+  error: 150     # Set an error limit of 150 characters per line.

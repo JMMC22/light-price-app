@@ -32,18 +32,18 @@ struct PricePanel: View {
     var body: some View {
         VStack(spacing: 12) {
             Text(title)
-                .LPFont(.Roboto(16, weight: .bold), color: .customBlack)
+                .LPFont(.roboto(16, weight: .bold), color: .customBlack)
             Text(viewModel.rangeHour + "h")
-                .LPFont(.Roboto(48, weight: .blackItalic), color: .customBlack)
+                .LPFont(.roboto(48, weight: .blackItalic), color: .customBlack)
             HStack(alignment: .center) {
                 Image(priceIcon)
                     .resizable()
                     .frame(width: 15, height: 15)
                     .foregroundStyle(priceColor)
                 Text(String(viewModel.price) + " €/kWh")
-                    .LPFont(.Roboto(18, weight: .bold), color: priceColor)
+                    .LPFont(.roboto(18, weight: .bold), color: priceColor)
             }
-            
+
             Divider()
         }
         .frame(maxWidth: .infinity, alignment: .center)
