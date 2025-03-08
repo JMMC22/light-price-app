@@ -16,15 +16,21 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Sonar scanner"
-  lane :sonar do
-    sonar_scanner(
-      project_key: "light-price-app",
-      organization: "JMMC22",
-      sources_path: "src",
-      binary_path: "build",
-      derived_data_path: "DerivedData",
-      extra_args: "-Dsonar.swift.exclusions=\"**/Pods/**,**/*.h\""
-    )
+  desc "SonarQube Analysis"
+  lane :run_sonar do
+    sonar_token = ENV['SONAR_TOKEN']
+    
+    sh "sonar-scanner \
+        -Dsonar.organization=jmmc22 \
+        -Dsonar.projectKey=JMMC22_light-price-app \
+        -Dsonar.sources=. \
+        -Dsonar.host.url=https://sonarcloud.io \
+        -Dsonar.login=#{sonar_token} \
+        -Dsonar.language=swift \
+        -Dsonar.swift.project=LightPriceApp.xcodeproj \
+        -Dsonar.swift.workspace=LightPriceApp.xcworkspace \
+        -Dsonar.swift.appScheme=iLuz \
+        -Dsonar.swift.simulator='platform=iOS Simulator,name=iPhone 14,OS=latest'"
   end
 end
+
